@@ -1,0 +1,238 @@
+@media screen and (max-width: 780px) {
+
+	.container {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.sep1 {
+	padding: 5px;
+	}
+	.sep2 {
+		padding: 10px;
+	}
+	.sep3 {
+		padding: 15px;
+	}
+	.sep4 {
+		padding: 20px;
+	}
+	.header-menu {
+		clear: both;
+		visibility: none;
+	}
+	.home-back {
+		background-position: center center;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.header-menu ul {
+		padding-left: 0;
+		text-align: center;
+		padding-top: 30px;
+		display: none;
+	}
+	.header-menu ul li {
+		display: block;
+		border-bottom: 1px solid #fff;
+		width: 100%;
+		padding: 5px;
+	}
+	.header-menu ul li a {
+		color: #fff;
+		text-decoration: none;
+		font-size: 16px;
+		font-family: 'Open Sans', sans-serif;
+	  	transition: none;
+	  	border-bottom: none;
+	}
+	.header-menu ul li a:hover {
+	  	color: #002434;
+	  	border-bottom: none;
+	  	padding: auto; 
+	}
+	.header-menu ul li.current-menu-item a {
+		color: #002434;
+		border-bottom: none;
+		padding-bottom: auto;
+	}
+	#menu-bar {
+		display: block;
+		text-align: right;
+	}
+	#menu-bar img:hover {
+		cursor: pointer;
+	}
+	.banner-big-text {
+		padding-top: 50px;
+	}
+	.banner-big-text h1 {
+		font-size: 19px;
+	}
+	.banner-big-text h2 {
+		font-size: 19px;
+		margin-top: 0;
+	}
+	.banner-big-text h3 {
+		font-size: 25px;
+		margin-top: 0;
+	}
+	.banner-buttons {
+		padding-bottom: 30px;
+	}
+	.banner-buttons a {
+		background: #002434;
+		border-color: #002434;
+		padding: 10px 15px;
+		font-size: 16px;
+		border-radius: 18px;
+		color: #fff;
+	}
+	.banner-buttons a:first-child {
+		display: none;
+	}
+	.banner-buttons-small a:first-child {
+		display: block;
+	}
+	.why-schubbs-img {
+		padding: 0;
+	}
+	.why-schubbs-img h2 {
+		font-size: 15px;
+		line-height: 1.2;
+		margin-top: 10px;
+	}
+	.testimonial {
+		padding: 20px;
+		margin: 0;
+	}
+	.sec-title h2 {
+		font-size: 25px;
+	}
+	.stats-sec {
+		margin: 0;
+		margin-bottom: 30px;
+	}
+	.stats-img {
+		margin: 0 8px;
+	}
+	.stats-text {
+		min-height: 130px;
+	}
+	.stats-text h1 {
+		font-size: 40px;
+	}
+	.stats-text p {
+		font-size: 15px;
+	}
+	.form-elem textarea {
+		height: 150px;
+	}
+	.contact-form {
+		display: none;
+	}
+	.clinic-info {
+		display: none;
+	}
+	.multiple-locations {
+		padding-bottom: 40px;
+		text-align: center;
+	}
+	.multiple-locations h2 {
+		font-size: 20px;
+	}
+	.multiple-locations h3 {
+		font-size: 18px;
+	}
+	.clinics {
+		display: block !important;
+	}
+	.news {
+		padding: 0;
+	}
+	.news-info {
+		padding: 20px;
+		margin-bottom: 10px;
+	}
+	#cal .header span {
+		font-size: 25px;
+	}
+	#cal .header .right.button {
+		right: 10px;
+		font-size: 25px;
+	}
+	#cal td {
+		font-size: 12px;
+	}
+	.appointment-schedule h3 {
+		font-size: 20px;
+	}
+	.appoint-timing {
+		font-size: 16px;
+		padding: 5px 0;
+	}
+	.prev-nxt-btns {
+		font-size: 15px;
+	}
+	.prev-nxt-btns img {
+		width: 15px;
+	}
+	.prev-btn,.next-btn{
+		width: 100%;
+		margin-bottom: 5px;
+	}
+	.appointment-content {
+		padding-left: 0;
+		padding-top: 20px;/
+	}
+	.sidebar {
+		padding-left: 0;
+	}
+	.team-member {
+		padding: 0 20px;
+	}
+	.team-member-info {
+		text-align: center;
+	}
+	.modal {
+		padding: 0 5%;
+	}
+	.container.location-white-back {
+		margin: 0 15px;
+		padding: 0;
+	}
+	.footer-logo {
+		text-align: center;
+	}
+	.footer-menu ul li {
+		padding: 5px 10px;
+	}
+	.footer-menu ul li a{
+		font-size: 15px;
+	}
+	.white-button {
+		display: none; 
+	}
+	.footer-social {
+		float: none;
+		text-align: center;
+	}
+	.copyright {
+		font-size: 11px;
+		text-align: center;
+	}
+	.md-hide {
+		display: block;
+	}
+	.services-text h2 {
+		margin-top: 15px;
+		font-size: 28px;
+		text-align: center;
+	}
+	.post-video iframe {
+		width: 100%;
+		height: 200px;
+	}
+	.post-faqs {
+		font-size: 16px;
+	}
+}
