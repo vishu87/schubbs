@@ -3,7 +3,7 @@
 <div class="container-fluid blue-back">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-md-2 padd-0">
 				<div class="logo-img footer-logo">
 					<a href="<?php echo get_home_url();?>"><img src="<?php echo get_template_directory_uri();?>/images/logo.png"></a>
 				</div>
@@ -11,7 +11,7 @@
 					<span>&copy;2016 SCHUBBS Dental Clinics</span>
 				</div>
 			</div>
-			<div class="col-md-5">
+			<div class="col-md-6">
 				<div>
 					<nav class="footer-menu">
 						<?php 

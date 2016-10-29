@@ -203,6 +203,9 @@
 	.footer-logo {
 		text-align: center;
 	}
+	.footer-menu {
+		padding-top: 10px;
+	}
 	.footer-menu ul li {
 		padding: 5px 10px;
 	}
@@ -213,6 +216,7 @@
 		display: none; 
 	}
 	.footer-social {
+		padding-top: 15px;
 		float: none;
 		text-align: center;
 	}
@@ -234,5 +238,30 @@
 	}
 	.post-faqs {
 		font-size: 16px;
+	}
+	.location {
+		margin-bottom: 30px;
+	}
+	.location-info {
+		min-height: auto;
+	}
+	.search-Form h2 {
+		font-size: 20px;
+	}
+	.search-Form h3 {
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 780px) and (max-width: 1024px) {
+	
+	.blue-back, .footer-social, .copyright {
+		text-align: center;
+	}
+	.white-button {
+		display: none;
+	}
+	.footer-social {
+		float: none;
 	}
 }

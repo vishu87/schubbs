@@ -27,6 +27,6 @@ get_header();?>
 		<?php endwhile; endif;?>
 	</div>
 </div>
-<div class="sep1"></div>
+<div class="sep4"></div>
 
 <?php get_footer();?>

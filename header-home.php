@@ -43,7 +43,7 @@
 	<div class="sep1"></div>
 	<div class="banner-buttons">
 		<a href="<?php echo get_home_url();?>/locations">Our Locations</a>
-		<a href="<?php echo get_home_url();?>/appointments">Request Appointment</a>
+		<a href="<?php echo get_home_url();?>/appointment">Request Appointment</a>
 	</div>
 	<div class="sep4"></div>
 </div>

@@ -25,7 +25,7 @@
 				    $new_post = array(
 				        'post_title'    => $full_name,
 				        'post_content'  => $message,
-				        'post_status'   => 'publish',
+				        'post_status'   => 'draft',
 				        'post_type' => 'testimonial'
 				    );
 

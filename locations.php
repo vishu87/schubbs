@@ -2,11 +2,11 @@
 	get_header();
 ?>
 <div class="location-map">
-	<iframe id="loc-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.0230439660754!2d3.3668398141824136!3d6.441147825903658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8bb29d9b0d4b%3A0x202d45ed9ce97cc1!2sSchubbs+Dental+Clinic!5e1!3m2!1sen!2sin!4v1472819407223" width="100%" height="1000px" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<img id="loc-1" src="<?php echo get_template_directory_uri();?>/images/Apapa-Nigeria.jpg">
 
-	<iframe id="loc-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.9865046336085!2d3.4478214141823895!3d6.446749525840773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4fad5813719%3A0xaf7e4e887e5f8374!2sSchubbs+Dental+Clinic!5e1!3m2!1sen!2sin!4v1472819458020" width="100%" height="1000px" frameborder="0" style="border:0" allowfullscreen></iframe>
-	
-	<iframe id="loc-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.387449836581!2d3.3592242147709803!3d6.573887295245602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b92730ae2214b%3A0xf2c41690caf905a2!2sSchubbs+Dental+Clinic!5e1!3m2!1sen!2sin!4v1472819283944" width="100%" height="1000px" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<img id="loc-2" src="<?php echo get_template_directory_uri();?>/images/Ikoyi-Nigeria.jpg">
+
+	<img id="loc-3" src="<?php echo get_template_directory_uri();?>/images/Ikeja-Nigeria.jpg">
 
 </div>
 <div class="container">
@@ -31,7 +31,9 @@
 								<div class="sep1"></div>
 								<span>P: +(080) 505 57574</span><br>
 								<span>P: +(080) 348 49005</span><br>
-								<span>P: +(070) 463 10733</span>
+								<span>P: +(070) 463 10733</span><br>
+								<a class="direction-link" href="https://www.google.com/maps/place/Schubbs+Dental+Clinic/@6.441537,3.36905,17z/data=!4m5!3m4!1s0x0:0x202d45ed9ce97cc1!8m2!3d6.4411418!4d3.3690275?hl=en-US" target="_blank">Get Direction</a>
+
 							</div>
 						</div>
 					</div>
@@ -48,7 +50,8 @@
 								<span>P: +(01) 279 8232</span><br>
 								<span>P: +(01) 279 8233</span><br>
 								<span>P: +(080) 668 56109</span><br>
-								<span>P: +(070) 463 10734</span>
+								<span>P: +(070) 463 10734</span><br>
+								<a class="direction-link" href="https://www.google.com/maps/place/Schubbs+Dental+Clinic/@6.4478009,3.4495146,16.44z/data=!4m5!3m4!1s0x103bf4fad5813719:0xaf7e4e887e5f8374!8m2!3d6.4466332!4d3.4493362?hl=en-US" target="_blank">Get Direction</a>
 							</div>
 						</div>
 					</div>
@@ -64,7 +67,8 @@
 								<div class="sep1"></div>
 								<span>P: +(01) 342 9191</span><br>
 								<span>P: +(070) 463 10735</span><br>
-								<span>P: +(070) 463 10738</span>
+								<span>P: +(070) 463 10738</span><br>
+								<a class="direction-link" href="https://www.google.com/maps/place/Schubbs+Dental+Clinic/@6.5743243,3.3615309,17z/data=!4m5!3m4!1s0x103b92730ae2214b:0xf2c41690caf905a2!8m2!3d6.5738873!4d3.3614129?hl=en-US" target="_blank">Get Direction</a>
 							</div>
 						</div>
 					</div>

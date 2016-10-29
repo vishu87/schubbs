@@ -36,10 +36,10 @@ body {
 	
 }
 
+
 .wrapper{
 	min-height: 100%;
-	/*margin-bottom: -120px;*/
-	padding-bottom: 120px;
+	/*padding-bottom: 120px;*/
 }
 
 /*---------header.php-----------*/
@@ -639,7 +639,8 @@ body {
 .search-bar input#s {
 	width: 100%;
 	height: 50px;
-	border: 2px solid #ddd; 
+	border: 2px solid #ddd;
+	padding: 0 10px; 
 }
 .archives li {
 	list-style-type: none;
@@ -650,10 +651,19 @@ body {
 	font-size: 16px;
 }
 
+/*---- search.php -----*/
+
+.search-highlight {
+    background: #eee  
+}
+
+
 /******** footer.php ********/
 
+.footer-menu {
+	padding-top: 25px;
+}
 .footer-menu ul {
-	padding-top: 10px;
 	padding-left: 0;
 	text-align: center;
 }
@@ -664,12 +674,12 @@ body {
 }
 .footer-menu ul li a {
 	color: #002434;
-	font-size: 16px;
+	font-size: 15px;
 	text-decoration: none;
 }
 .white-button {
 	text-align: center;
-	padding-top: 15px;
+	padding-top: 28px;
 	float: left;	
 }
 .white-button a {
@@ -681,7 +691,7 @@ body {
 	border-radius: 10px; 
 }
 .footer-social {
-	padding-top: 15px;
+	padding-top: 28px;
 	float: right;
 }
 .footer-social ul {
@@ -768,14 +778,9 @@ body {
 /***** Locations CSS *****/
 
 .location-map {
-	/*background-image: url(https://maps.google.co.in/maps?     q=new+Delhi&hl=en&sll=28.572047,77.069178&sspn=0.02348,0.039482&hnear=Delhi&t=m&z=10);
-	padding: 50px 0;*/
-	position: relative;
-	background: #ddd;
-}
-.gm-style .place-card div, .gm-style .place-card a, .gm-style .default-card div, .gm-style .default-card a {
-	display: none !important;
-	visibility: hidden !important;
+	border: 1px solid #eee;
+	/*padding: 5px;*/
+	overflow: hidden;
 }
 div.login-control {
 	display: none !important;
@@ -789,15 +794,27 @@ div.login-control {
 	top: 150px;
 	box-shadow: 0 5px 15px #000;
 }
-.location {
-	padding: 20px;
-	color: #002434;
-	min-height: 300px;
-	cursor: pointer;
+.location-map img{
+	transform: scale(1.7);
+	width: 100%;
+	height: auto;
 }
-.loc-active {
+.location-map img:hover {
+	transform: scale(1.8);
+	transition: 0.3s ease-in-out;
+}
+.location {
+	/*padding: 20px;*/
+	color: #002434;
+	/*min-height: 340px;*/
+	/*cursor: pointer;*/
+}
+/*.loc-active {
 	background: #002434;
 	color: #fff;
+}*/
+.loc-active a {
+	/*color: #fff !important;*/
 }
 .location hr {
 	border-color: #ccc;	
@@ -806,15 +823,34 @@ div.login-control {
 	position: absolute;
 	width: 22px;
 	height: auto;
-	top: 28px;
+	top: 6px;
 }
 .location-title span {
 	font-size: 25px;
 	padding-left: 35px;
 	font-weight: bold;
 }
+.location-info {
+	min-height: 190px;
+}
 .location-info span {
 	font-size: 16px;
+}
+.location-info a {
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 600;
+	color: #002434;
+	margin-top: 10px;
+	display: inline-block;
+	margin-left: 10px;
+}
+.location-info a:hover {
+	color: #3FB9C9;
+}
+.location-info img {
+	width: 15px;
+	height: auto;
 }
 
 /**** Services Old.php *****/

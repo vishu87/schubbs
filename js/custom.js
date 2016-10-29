@@ -16,6 +16,21 @@ jQuery(document).ready(function(){
       }
     });
 
+    /*------- Search Validation -----*/
+
+    jQuery('#searchform').submit(function(){
+
+        var search_value = jQuery("input[name='s']").attr('value');
+        // alert(search_value);
+        var stringlen = jQuery.trim(search_value).length;
+        
+        if(search_value == "" || search_value == null || stringlen == 0)
+        {
+            alert("Search Form must be filled");
+            return false;       
+        }
+    }); 
+
 });
 
 jQuery(".testimonials").owlCarousel({
@@ -46,13 +61,13 @@ jQuery(document).ready(function(){
         jQuery(".header-menu ul").slideToggle();
     });
 
-    jQuery("ul.centers-tabs li").click(function() {
-        var data_id = jQuery(this).attr("data-id");
-	    jQuery("li").removeClass("active");
-	    jQuery(this).addClass("active");
-        jQuery(".center-content").removeClass("active");
-        jQuery("#tab-"+data_id).addClass("active");
-   	});
+    // jQuery("ul.centers-tabs li").click(function() {
+    //     var data_id = jQuery(this).attr("data-id");
+	   //  jQuery("li").removeClass("active");
+	   //  jQuery(this).addClass("active");
+    //     jQuery(".center-content").removeClass("active");
+    //     jQuery("#tab-"+data_id).addClass("active");
+   	// });
 
     var modal = document.getElementById('myModal');
 
@@ -63,6 +78,13 @@ jQuery(document).ready(function(){
 
         jQuery(".modal-content").html(jQuery("#member-info-"+id).html());
 
+        jQuery('#myModal').css({
+            "display":"block"
+        });
+    });
+
+    // When the user clicks on the button, open the modal
+    jQuery('.myBtn').click( function() {
         jQuery('#myModal').css({
             "display":"block"
         });
@@ -92,30 +114,30 @@ jQuery(document).ready(function(){
 
     /*--------- Location Map Changer ----------*/
 
-    jQuery('.location1').click(function(){
-        jQuery(this).addClass('loc-active');
-        jQuery('.location2').removeClass('loc-active');
-        jQuery('.location3').removeClass('loc-active');
-        jQuery('#loc-1').show();
-        jQuery('#loc-2').hide(); 
-        jQuery('#loc-3').hide();
-    });
-    jQuery('.location2').click(function(){
-        jQuery(this).addClass('loc-active');
-        jQuery('.location1').removeClass('loc-active');
-        jQuery('.location3').removeClass('loc-active');
-        jQuery('#loc-2').show();
-        jQuery('#loc-1').hide(); 
-        jQuery('#loc-3').hide();
-    });
-    jQuery('.location3').click(function(){
-        jQuery(this).addClass('loc-active');
-        jQuery('.location1').removeClass('loc-active');
-        jQuery('.location2').removeClass('loc-active');
-        jQuery('#loc-3').show();
-        jQuery('#loc-1').hide(); 
-        jQuery('#loc-2').hide();
-    });
+    // jQuery('.location1').click(function(){
+    //     jQuery(this).addClass('loc-active');
+    //     jQuery('.location2').removeClass('loc-active');
+    //     jQuery('.location3').removeClass('loc-active');
+    //     jQuery('#loc-1').show();
+    //     jQuery('#loc-2').hide(); 
+    //     jQuery('#loc-3').hide();
+    // });
+    // jQuery('.location2').click(function(){
+    //     jQuery(this).addClass('loc-active');
+    //     jQuery('.location1').removeClass('loc-active');
+    //     jQuery('.location3').removeClass('loc-active');
+    //     jQuery('#loc-2').show();
+    //     jQuery('#loc-1').hide(); 
+    //     jQuery('#loc-3').hide();
+    // });
+    // jQuery('.location3').click(function(){
+    //     jQuery(this).addClass('loc-active');
+    //     jQuery('.location1').removeClass('loc-active');
+    //     jQuery('.location2').removeClass('loc-active');
+    //     jQuery('#loc-3').show();
+    //     jQuery('#loc-1').hide(); 
+    //     jQuery('#loc-2').hide();
+    // });
 
     /*----- Validation -----*/
 

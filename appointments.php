@@ -4,17 +4,17 @@
 	if(isset($_POST['is_submit'])) {
 
 		if(wp_verify_nonce($_POST["_wpnonce"], 'appoint_form')){
-			$full_name = isset($_POST["full_name"])?esc_attr($_POST["full_name"]):'';
-			$email = isset($_POST["email"])?esc_attr($_POST["email"]):'';
-			$mobile = isset($_POST["mobile"])?esc_attr($_POST["mobile"]):'';
-			$mobile2 = isset($_POST["mobile2"])?esc_attr($_POST["mobile2"]):'';
-			$appoint_date = isset($_POST["appoint_date"])?esc_attr($_POST["appoint_date"]):'';
-			$appoint_time = isset($_POST["appoint_time"])?esc_attr($_POST["appoint_time"]):'';
-			$location = isset($_POST["location"])?esc_attr($_POST["location"]):'';
-			$reason = isset($_POST["reason"])?esc_attr($_POST["reason"]):'';
-			$first_visit = isset($_POST["first_visit"])?esc_attr($_POST["first_visit"]):'';
-			$last_visit = isset($_POST["last_visit"])?esc_attr($_POST["last_visit"]):'';
-			$comment = isset($_POST["comment"])?esc_attr($_POST["comment"]):'';
+			$full_name = (isset($_POST["full_name"]))?esc_attr($_POST["full_name"]):'';
+			$email = (isset($_POST["email"]))?esc_attr($_POST["email"]):'';
+			$mobile = (isset($_POST["mobile"]))?esc_attr($_POST["mobile"]):'';
+			$mobile2 = (isset($_POST["mobile2"]))?esc_attr($_POST["mobile2"]):'';
+			$appoint_date = (isset($_POST["appoint_date"]))?esc_attr($_POST["appoint_date"]):'';
+			$appoint_time = (isset($_POST["appoint_time"]))?esc_attr($_POST["appoint_time"]):'';
+			$location = (isset($_POST["location"]))?esc_attr($_POST["location"]):'';
+			$reason = (isset($_POST["reason"]))?esc_attr($_POST["reason"]):'';
+			$first_visit = (isset($_POST["first_visit"]))?esc_attr($_POST["first_visit"]):'';
+			$last_visit = (isset($_POST["last_visit"]))?esc_attr($_POST["last_visit"]):'';
+			$comment = (isset($_POST["comment"]))?esc_attr($_POST["comment"]):'';
 
 
 			if($full_name && $email && $mobile && $appoint_date && $appoint_time && $location){
@@ -40,6 +40,25 @@
 						"comment" => $comment
 
 					));
+					
+					$to = 'shubhambhatt52@gmail.com';
+					/*frontoffice@schubbsdental.com*/
+					$subject = 'Schubbs Dental Contact Form';
+					$message = '<b>Name: </b>'.$full_name.'<br>
+								<b>Email: </b>'.$email.'<br>
+								<b>Mobile: </b>'.$mobile.'<br>
+								<b>Alternate Mobile: </b>'.$mobile2.'<br>
+								<b>Appoint Date: </b>'.date("Y-m-d",strtotime($appoint_date)).'<br>
+								<b>Appoint Time: </b>'.$appoint_time.'<br>
+								<b>Location: </b>'.$location.'<br>
+								<b>Reason: </b>'.$reason.'<br>
+								<b>First Visit: </b>'.$first_visit.'<br>
+								<b>Last Visit:</b>'.$last_visit.'<br>
+								<b>Message:</b>'.$comment;
+
+					$headers = array('Content-Type: text/html; charset=UTF-8');
+					
+					wp_mail( $to, $subject, $message, $headers );
 
 					wp_redirect(get_permalink().'?submit=true#success');
 				}
