@@ -139,7 +139,7 @@
 			<div class="col-md-6 col-xs-6">
 				<div class="why-schubbs-img">
 					<img src="<?php echo get_template_directory_uri();?>/images/experienced-dentists.jpg">
-					<h2>Multidisciplinary Experts</h2>
+					<h2>Child-friendly Environment</h2>
 				</div>
 			</div>
 		</div>
@@ -183,7 +183,7 @@
 				</div>
 				<div class="stats-text">
 					<h1 id="dentists-no">12</h1>
-					<p>Number of dentists</p>
+					<p>Number of dentist</p>
 				</div>
 			</div>
 		</div>
@@ -229,7 +229,13 @@
 			if($query->have_posts()): while($query->have_posts()): $query->the_post();
 			?>
 			<div class="testimonial">
-				<h3><?php the_title();?></h3>
+				<?php
+					$test_title = get_the_title();
+					if(strlen($test_title) > 5) { ?>
+						<h3><?php echo substr($test_title, 0, 8).'...';?></h3>
+					<?php } else { ?>
+						<h3><?php echo $test_title; ?></h3>
+					<?php } ?>
 				<div class="testimonial-text">
 					<a href="<?php the_permalink();?>"><p><?php the_excerpt();?></p></a>
 				</div>

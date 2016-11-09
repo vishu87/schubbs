@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
-	<title><?php wp_title(''); ?> || <?php bloginfo('name'); ?></title>
+	<title><?php bloginfo('name'); ?><?php wp_title('||'); ?></title>
 	<?php wp_head(); ?>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">

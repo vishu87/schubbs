@@ -34,7 +34,7 @@ function theme_css_scripts() {
 	wp_enqueue_style('datepicker-css','//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css', array(), '1.0.0', false);
 
 	wp_enqueue_script('jquery');
-	wp_enqueue_script( 'googlemap', '//maps.googleapis.com/maps/api/js', array(), '1.0.0', true );
+	// wp_enqueue_script( 'googlemap', '//maps.googleapis.com/maps/api/js', array(), '1.0.0', true );
 	wp_enqueue_script( 'owl-carousal', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'lightbox-1', get_template_directory_uri() . '/js/lightbox.min.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'datepicker-ui-js','//code.jquery.com/ui/1.10.3/jquery-ui.js', array(), '1.0.0', true );

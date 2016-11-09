@@ -226,7 +226,7 @@ body {
 }
 .test-back {
 	padding: 50px 0;
-	background-image: url(images/test-back.jpg);  
+	background-image: url(images/test-back1.jpg);  
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -258,7 +258,7 @@ body {
 	font-weight: 600;	
 }
 .testimonial-text {
-	min-height: 100px;
+	min-height: 120px;
 }
 .testimonial a {
 	color: #002434;
@@ -679,7 +679,7 @@ body {
 }
 .white-button {
 	text-align: center;
-	padding-top: 28px;
+	padding-top: 18px;
 	float: left;	
 }
 .white-button a {
@@ -691,7 +691,7 @@ body {
 	border-radius: 10px; 
 }
 .footer-social {
-	padding-top: 28px;
+	padding-top: 18px;
 	float: right;
 }
 .footer-social ul {
