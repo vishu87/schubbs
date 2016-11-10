@@ -1,4 +1,4 @@
-<?php /* Template Name: Appointments */
+<?php /* Template Name: Appointments 3 */
 	global $wpdb;
 	$flag_error = '';
 	if(isset($_POST['is_submit'])) {
@@ -53,10 +53,10 @@
 								<b>Location: </b>'.$location.'<br>
 								<b>Reason: </b>'.$reason.'<br>
 								<b>First Visit: </b>'.$first_visit.'<br>
-								<b>Last Visit:</b>'.$last_visit.'<br>
-								<b>Message:</b>'.$comment;
+								<b>Last 6 Months Visit: </b>'.$last_visit.'<br>
+								<b>Message: </b>'.$comment;
 
-					$headers = array('Content-Type: text/html; charset=UTF-8');
+					$headers = ('Content-Type: text/html; charset=UTF-8');
 					
 					wp_mail( $to, $subject, $message, $headers );
 

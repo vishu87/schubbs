@@ -25,7 +25,7 @@
 			<div class="col-md-5"></div>
 			<div class="col-md-4">
 				<div class="white-button">
-					<a href="<?php echo get_home_url();?>/appointments">Request Appointment</a>
+					<a href="<?php echo get_home_url();?>/appointment">Request Appointment</a>
 				</div>
 				<div class="footer-social">
 					<ul>

@@ -12,11 +12,11 @@
 			<?php 
 			$query = new WP_Query(array(
 				'post_type'=>'post', 
-				'posts_per_page'=>2
+				'posts_per_page'=>1
 			)); 
 			?>
 			<?php if($query->have_posts()):while($query->have_posts()): $query->the_post(); ?>
-			<div class="blog">
+			<div class="blogs">
 				<div class="blog-img">
 					<?php the_post_thumbnail();?>
 				</div>
@@ -28,6 +28,20 @@
 				<div class="sep1"></div>
 				<hr>
 				<div class="sep1"></div>
+			</div>
+			<div class="blog-pagination">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="blog-btns blog-prev">
+							<?php previous_post_link(); ?>
+						</div>	
+					</div>
+					<div class="col-md-6">
+						<div class="blog-btns blog-next">
+							<?php next_post_link(); ?>
+						</div>
+					</div>
+				</div>
 			</div>
 			<?php endwhile; endif;?>
 		</div>
@@ -54,7 +68,7 @@
 					)); 
 					?>
 				<?php if($query->have_posts()):while($query->have_posts()): $query->the_post(); ?>
-				<div class="blog">
+				<div class="blogs">
 					<ul>
 						<li><a href="<?php the_permalink()?>"><?php the_title();?></a></li>
 						<span><?php the_time("F j, Y"); ?></span>

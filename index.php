@@ -122,7 +122,7 @@
 	<div class="col-md-3"></div>
 </div>
 <!-- Modal End -->	
-
+<body <?php body_class(); ?>>
 <div class="container-fluid dark-blue-back">
 	<div class="container">
 		<div class="sec-title">
@@ -132,7 +132,7 @@
 		<div class="row">
 			<div class="col-md-6 col-xs-6">
 				<div  class="why-schubbs-img">
-					<img src="<?php echo get_template_directory_uri();?>/images/advanced-technology.jpg">
+					<img src="<?php echo get_template_directory_uri();?>/images/advanced-technology1.jpg">
 					<h2>Advanced Technology</h2>
 				</div>
 			</div>
@@ -146,13 +146,13 @@
 		<div class="row">
 			<div class="col-md-6 col-xs-6">
 				<div class="why-schubbs-img">
-					<img src="<?php echo get_template_directory_uri();?>/images/multidisciplinary.jpg">
+					<img src="<?php echo get_template_directory_uri();?>/images/experienced-dentists1.jpg">
 					<h2>Experienced Dentists</h2>
 				</div>
 			</div>
 			<div class="col-md-6 col-xs-6">
 				<div class="why-schubbs-img">
-					<img src="<?php echo get_template_directory_uri();?>/images/bicon-logo.jpg">
+					<img src="<?php echo get_template_directory_uri();?>/images/bicon-implants.jpg">
 					<h2>Bicon Implants</h2>
 				</div>
 			</div>
@@ -232,7 +232,7 @@
 				<?php
 					$test_title = get_the_title();
 					if(strlen($test_title) > 5) { ?>
-						<h3><?php echo substr($test_title, 0, 8).'...';?></h3>
+						<h3><?php echo substr($test_title, 0, 8).'.';?></h3>
 					<?php } else { ?>
 						<h3><?php echo $test_title; ?></h3>
 					<?php } ?>
@@ -240,7 +240,13 @@
 					<a href="<?php the_permalink();?>"><p><?php the_excerpt();?></p></a>
 				</div>
 				<hr>
-				<h5><?php the_title();?></h5>
+				<?php
+					$test_title = get_the_title();
+					if(strlen($test_title) > 5) { ?>
+						<h5><?php echo substr($test_title, 0, 8).'.';?></h5>
+					<?php } else { ?>
+						<h5><?php echo $test_title; ?></h5>
+					<?php } ?>
 			</div>
 			<?php endwhile; endif;?>
 		</div>

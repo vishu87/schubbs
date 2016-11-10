@@ -24,6 +24,21 @@
 			<div class="post-info">
 				<?php the_content();?>
 			</div>
+			<div class="sep1"></div>
+			<div class="blog-pagination">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="blog-btns blog-prev">
+							<?php previous_post_link(); ?>
+						</div>	
+					</div>
+					<div class="col-md-6">
+						<div class="blog-btns blog-next">
+							<?php next_post_link(); ?>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="sidebar">
@@ -49,12 +64,13 @@
 					)); 
 					?>
 				<?php if($query->have_posts()):while($query->have_posts()): $query->the_post(); ?>
-				<div class="blog">
+				<div class="blogs">
 					<ul>
 						<li><a href="<?php the_permalink()?>"><?php the_title();?></a></li>
 						<span><?php the_time("F j, Y"); ?></span>
 					</ul>
 				</div>
+
 				<?php endwhile; endif;?>
 				<!-- <div class="sep1"></div>
 				<hr>

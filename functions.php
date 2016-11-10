@@ -100,5 +100,17 @@ function search_content_highlight() {
     echo '<p>' . $content . '</p>';
 }
 
+/** changing default wordpres email settings */
+ 
+add_filter('wp_mail_from', 'new_mail_from');
+add_filter('wp_mail_from_name', 'new_mail_from_name');
+ 
+function new_mail_from($old) {
+ return 'frontoffice@schubbsdental.com';
+}
+function new_mail_from_name($old) {
+ return 'Schubbs Dental Website';
+}
+
 ?>
 

@@ -25,8 +25,10 @@
 					<img src="<?php echo get_template_directory_uri();?>/images/direction-icon.png"><a class="direction-link" href="https://www.google.com/maps/place/Schubbs+Dental+Clinic/@6.441537,3.36905,17z/data=!4m5!3m4!1s0x0:0x202d45ed9ce97cc1!8m2!3d6.4411418!4d3.3690275?hl=en-US" target="_blank">Get Directions</a>
 				</div>
 				<div class="sep2"></div>
-				<div class="location-map">
-					<a class="direction-link" href="https://www.google.com/maps/place/Schubbs+Dental+Clinic/@6.441537,3.36905,17z/data=!4m5!3m4!1s0x0:0x202d45ed9ce97cc1!8m2!3d6.4411418!4d3.3690275?hl=en-US" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/Apapa-Nigeria.jpg"></a>
+				<div class="location-gallery">
+					<div class="loc-gal-img">
+						<img src="<?php echo get_template_directory_uri();?>/images/Apapa-Nigeria.jpg">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -47,8 +49,13 @@
 					<img src="<?php echo get_template_directory_uri();?>/images/direction-icon.png"><a class="direction-link" href="https://www.google.com/maps/place/Schubbs+Dental+Clinic/@6.4478009,3.4495146,16.44z/data=!4m5!3m4!1s0x103bf4fad5813719:0xaf7e4e887e5f8374!8m2!3d6.4466332!4d3.4493362?hl=en-US" target="_blank">Get Directions</a>
 				</div>
 				<div class="sep2"></div>
-				<div class="location-map">
-					<a class="direction-link" href="https://www.google.com/maps/place/Schubbs+Dental+Clinic/@6.4478009,3.4495146,16.44z/data=!4m5!3m4!1s0x103bf4fad5813719:0xaf7e4e887e5f8374!8m2!3d6.4466332!4d3.4493362?hl=en-US" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/Ikoyi-Nigeria.jpg"></a>
+				<div class="location-gallery">
+					<div class="loc-gal-img">
+						<img src="<?php echo get_template_directory_uri();?>/images/Ikoyi-Nigeria.jpg">
+					</div>
+					<div class="loc-gal-img">
+						<img src="<?php echo get_template_directory_uri();?>/images/ikoyi-gallery1.jpg">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -68,8 +75,16 @@
 					<img src="<?php echo get_template_directory_uri();?>/images/direction-icon.png"><a class="direction-link" href="https://www.google.com/maps/place/Schubbs+Dental+Clinic/@6.5743243,3.3615309,17z/data=!4m5!3m4!1s0x103b92730ae2214b:0xf2c41690caf905a2!8m2!3d6.5738873!4d3.3614129?hl=en-US" target="_blank">Get Directions</a>
 				</div>
 				<div class="sep2"></div>
-				<div class="location-map">
-					<a class="direction-link" href="https://www.google.com/maps/place/Schubbs+Dental+Clinic/@6.5743243,3.3615309,17z/data=!4m5!3m4!1s0x103b92730ae2214b:0xf2c41690caf905a2!8m2!3d6.5738873!4d3.3614129?hl=en-US" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/Ikeja-Nigeria.jpg"></a>
+				<div class="location-gallery">
+					<div class="loc-gal-img">
+						<img src="<?php echo get_template_directory_uri();?>/images/Ikeja-Nigeria.jpg">
+					</div>
+					<div class="loc-gal-img">
+						<img src="<?php echo get_template_directory_uri();?>/images/ikeja-gallery1.jpg">
+					</div>
+					<div class="loc-gal-img">
+						<img src="<?php echo get_template_directory_uri();?>/images/ikeja-gallery2.jpg">
+					</div>
 				</div>
 			</div>
 		</div>

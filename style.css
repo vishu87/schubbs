@@ -609,17 +609,31 @@ body {
 .blog-info p {
 	margin-bottom: 0;
 }
-.blog ul {
+.blogs ul {
 	padding-left: 15px;
 }
-.blog ul li a {
+.blogs ul li a {
 	text-decoration: none;
 	font-size: 16px;
 	color: #002434;
 	font-weight: 600;
 }
-.blog ul span {
+.blogs ul span {
 	font-size: 12px;
+}
+.blog-pagination a {
+	color: #002434;
+    text-decoration: none;
+    font-size: 20px;
+    content: 'Next';
+    text-transform: uppercase;
+    font-family: 'Oswald';
+}
+.blog-btns {
+	font-size: 30px;
+}
+.blog-next {
+	text-align: right;
 }
 .sidebar {
 	padding-left: 20px;
@@ -794,14 +808,10 @@ div.login-control {
 	top: 150px;
 	box-shadow: 0 5px 15px #000;
 }
-.location-map img{
-	transform: scale(1.7);
+.loc-gal-img img{
+	/*transform: scale(1.1);*/
 	width: 100%;
 	height: auto;
-}
-.location-map img:hover {
-	transform: scale(1.8);
-	transition: 0.3s ease-in-out;
 }
 .location {
 	/*padding: 20px;*/

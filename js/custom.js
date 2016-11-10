@@ -4,16 +4,18 @@ jQuery(document).ready(function(){
     var position = jQuery('#animate-no').position();
 
     jQuery(window).scroll(function(){
-      if( jQuery(window).scrollTop() > (position.top-150) && show_no == 0) {
-        jQuery('.stats-text h1').css({
-            "visibility":"visible"
-        });
-        jQuery('#implants-no').animateNumber({ number: 2062 },2000);
-        jQuery('#dentists-no').animateNumber({ number: 12 },1000);
-        jQuery('#braces-no').animateNumber({ number: 6450 },2000);
-        jQuery('#operations-no').animateNumber({ number: 28 },2000);
-        show_no = 1;
-      }
+        if(jQuery( "body" ).hasClass( "home" )) {
+            if( jQuery(window).scrollTop() > (position.top-150) && show_no == 0) {
+            jQuery('.stats-text h1').css({
+                "visibility":"visible"
+            });
+            jQuery('#implants-no').animateNumber({ number: 2062 },2000);
+            jQuery('#dentists-no').animateNumber({ number: 12 },1000);
+            jQuery('#braces-no').animateNumber({ number: 6450 },2000);
+            jQuery('#operations-no').animateNumber({ number: 28 },2000);
+            show_no = 1;
+            }
+        }
     });
 
     /*------- Search Validation -----*/
@@ -47,6 +49,12 @@ jQuery(".clinics").owlCarousel({
 
 jQuery(".schubbs-news").owlCarousel({
     items : 3,
+    loop:true,
+    autoPlay:true
+});
+
+jQuery(".location-gallery").owlCarousel({
+    items : 1,
     loop:true,
     autoPlay:true
 });
