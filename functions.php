@@ -17,6 +17,7 @@ else update_option("medium_crop", "1");
 
 add_image_size( 'big-thumb', 570, 320, true );
 add_image_size( 'medium-thumb', 260, 120, true );
+add_image_size( 'blog-thumb', 370, 234, true );
 
 
 function theme_css_scripts() {

@@ -5,40 +5,50 @@
 	<div class="row">
 		<div class="col-md-8">
 			<?php
-				$query = new WP_Query(array(
-					"post_type"=>"post",
-					"posts_per_page"=> 1,
-					"order"=>"ASC"
-				));
+				$args = array(
+					'posts_per_page' => 1,
+					'post_type' => 'post'
+				);
+
+				$query = new WP_Query( $args );
 			?>
-			<div class="page-title sec-title sec-title-blue">
-				<h2><?php the_title();?></h2>
-			</div>
-			<div class="sep2"></div>
-			<?php if(has_post_thumbnail()): ?>	
-				<div class="post-img">
-					<?php the_post_thumbnail();?>
+				<div class="page-title sec-title sec-title-blue">
+					<h2><?php the_title();?></h2>
+					<h5><?php the_time("F j, Y"); ?></h5>
 				</div>
-			<?php endif; ?>
-			<div class="sep1"></div>
-			<div class="post-info">
-				<?php the_content();?>
-			</div>
-			<div class="sep1"></div>
-			<div class="blog-pagination">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="blog-btns blog-prev">
-							<?php previous_post_link(); ?>
-						</div>	
+				<div class="sep2"></div>
+				<?php if(has_post_thumbnail()): ?>	
+					<div class="post-img">
+						<?php the_post_thumbnail();?>
 					</div>
-					<div class="col-md-6">
-						<div class="blog-btns blog-next">
-							<?php next_post_link(); ?>
+				<?php endif; ?>
+				<div class="sep1"></div>
+				<div class="post-info">
+					<?php the_content();?>
+				</div>
+				<div class="sep1"></div>
+				<div class="blog-pagination">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="blog-btns blog-prev">
+								<?php
+								$prev_post = get_previous_post();
+								if (!empty( $prev_post )): ?>
+								  <a href="<?php echo get_permalink( $prev_post->ID ); ?>" title="<?php echo $prev_post->post_title ?>"><?php echo '<< Previous';?></a>
+								<?php endif ?>
+							</div>	
+						</div>
+						<div class="col-md-6">
+							<div class="blog-btns blog-next">
+								<?php
+								$next_post = get_next_post();
+								if (!empty( $next_post )): ?>
+								  <a href="<?php echo get_permalink( $next_post->ID ); ?>" title="<?php echo $next_post->post_title ?>"><?php echo 'Next >>';?></a>
+								<?php endif ?>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="sidebar">
@@ -64,7 +74,7 @@
 					)); 
 					?>
 				<?php if($query->have_posts()):while($query->have_posts()): $query->the_post(); ?>
-				<div class="blogs">
+				<div class="sidebar-blogs">
 					<ul>
 						<li><a href="<?php the_permalink()?>"><?php the_title();?></a></li>
 						<span><?php the_time("F j, Y"); ?></span>

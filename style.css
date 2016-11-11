@@ -38,7 +38,7 @@ body {
 
 
 .wrapper{
-	min-height: 100%;
+	min-height: 500px;
 	/*padding-bottom: 120px;*/
 }
 
@@ -161,6 +161,11 @@ body {
 .sec-title-blue h2 {
 	color: #002434;
 	border-bottom: 3px solid #3FB9C9;
+}
+.sec-title-blue h5 {
+	font-size: 13px;
+    font-style: italic;
+    margin-bottom: 0;
 }
 .why-schubbs-img {
 	text-align: center;
@@ -598,34 +603,109 @@ body {
 
 /**** Blog.php ****/
 
+.blogs {
+	min-height: 340px;
+}
+.blogs:nth-child(3) {
+	clear: both;
+}
+.blog-img {
+	position: relative;
+	overflow: hidden;
+}
 .blog-img img {
 	width: 100%;
 	height: auto;
 }
+.blog-info a {
+	color: #002434;
+	text-decoration: none;
+}
 .blog-info h3 {
 	font-weight: 600;
-	margin-top: 0;
+	margin-bottom: 0;
+}
+.blog-info span {
+	font-style: italic;
+	font-size: 13px;
 }
 .blog-info p {
 	margin-bottom: 0;
 }
-.blogs ul {
+.blog-opac {
+	display: none;
+	background: rgba(0,0,0,0.6);
+	text-align: center;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transition: 0.3s ease-in;
+}
+.blog-opac a {
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	padding: 5px 20px;
+	margin-top: 25%;
+	font-weight: 600;
+	display: inline-block;
+}
+.blog-img:hover .blog-opac {
+	display: block;
+}
+.blog-img:hover img {
+	transform: scale(1.1);
+	transition: 0.3s ease-in;
+}
+.blog-opac a:hover {
+	background: #fff;
+	transition: 0.3s ease;
+	color: #002434;
+}
+
+.blog-paginate a.page-numbers, .blog-paginate span.page-numbers.current {
+    font-size: 16px;
+    color: #fff;
+    background: #002434;
+    padding: 5px 12px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.blog-paginate span.page-numbers.dots {
+	font-size: 25px;
+}
+.blog-paginate a.page-numbers:hover {
+	background: #3FB9C9;
+}
+.blog-paginate a.page-numbers.prev {
+	margin-right: 5px;
+}
+.blog-paginate a.page-numbers.next {
+	margin-left: 5px;
+}
+.blog-paginate span.page-numbers.current {
+	background: #3FB9C9;
+}
+.sidebar-blogs ul {
 	padding-left: 15px;
 }
-.blogs ul li a {
+.sidebar-blogs ul li a {
 	text-decoration: none;
 	font-size: 16px;
 	color: #002434;
 	font-weight: 600;
 }
-.blogs ul span {
+.sidebar-blogs ul span {
 	font-size: 12px;
 }
 .blog-pagination a {
 	color: #002434;
     text-decoration: none;
-    font-size: 20px;
-    content: 'Next';
+    font-size: 18px;
     text-transform: uppercase;
     font-family: 'Oswald';
 }
