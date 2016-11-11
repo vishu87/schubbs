@@ -29,10 +29,10 @@
 				</div>
 				<div class="footer-social">
 					<ul>
-						<li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/facebook.png"></a></li>
-						<li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/youtube.png"></a></li>
-						<li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/twitter.png"></a></li>
-						<li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/instagram.png"></a></li>
+						<li><a href="https://www.facebook.com/Schubbs.Dental/" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/facebook.png"></a></li>
+						<li><a href="https://www.youtube.com/channel/UCEZJthTWQkCNcN46_YjgGCw" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/youtube.png"></a></li>
+						<li><a href="https://twitter.com/SchubbsDental" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/twitter.png"></a></li>
+						<li><a href="https://www.instagram.com/schubbsdental/" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/instagram.png"></a></li>
 					</ul>
 				</div>	
 			</div>
