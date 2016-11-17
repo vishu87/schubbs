@@ -36,14 +36,13 @@
 						"location" => $location,
 						"reason" => $reason,
 						"first_visit" => $first_visit,
-						"last_visit" => $last_visit,
 						"comment" => $comment
 
 					));
 					
-					$to = 'shubhambhatt52@gmail.com';
+					$to = 'frontoffice@schubbsdental.com';
 					/*frontoffice@schubbsdental.com*/
-					$subject = 'Schubbs Dental Contact Form';
+					$subject = 'Schubbs Dental Appointment Form';
 					$message = '<b>Name: </b>'.$full_name.'<br>
 								<b>Email: </b>'.$email.'<br>
 								<b>Mobile: </b>'.$mobile.'<br>
@@ -160,27 +159,39 @@
 						</select>
 					</div>
 					<div class="form-div">
-						<label>Appointment Reason</label>
+						<label>Reason for Visit</label>
 						<input class="form-input" name="reason" value="<?php echo ($_POST["reason"])?esc_attr($_POST["reason"]):'' ?>">
 					</div>
 					<div class="form-div">
-						<label>First Visit?</label>
+						<label>First Time Visitor?</label>
 						<div class="checkbox-div">
-							<input class="first-visit" type="radio" name="first_visit" value="Yes" checked><label>Yes</label>
+							<input id="first-visit" class="first-visit" type="radio" name="first_visit" value="Yes" <?php if(isset($_POST["first_visit"])){ if($_POST["first_visit"] == 'Yes'){ echo 'checked'; } } ?> ><label>Yes</label>
+
 							<span style="margin-left:20px;"></span>
-							<input class="first-visit" type="radio" name="first_visit" value="No" <?php if(isset($_POST["first_visit"])){ if($_POST["first_visit"] == 'No'){ echo 'checked'; } } ?> ><label>No</label>
+
+							<input id="first-visit" class="first-visit" type="radio" name="first_visit" value="No" <?php if(isset($_POST["first_visit"])){ if($_POST["first_visit"] == 'No'){ echo 'checked'; } } ?> ><label>No</label>
+
+							<!-- <input id="last-visit" class="first-visit" type="radio" name="first_visit" value="No" <?php if(isset($_POST["first_visit"])){ if($_POST["first_visit"] == 'No'){ echo 'checked'; } } ?> ><label>No</label> -->
+						</div>
+						<div id="first-visit-form" class="visit-form">
+							<a href="<?php echo get_home_url();?>/wp-content/uploads/2016/11/New-Patients.pdf" target="_blank">Download New Patient Form</a>
+							<label class="error">* Download Form and save time at the clinic during your visit</label>
+						</div>
+						<div id="last-visit-form" class="visit-form">
+							<a href="<?php echo get_home_url();?>/wp-content/uploads/2016/11/Update-Form.pdf" target="_blank">Download Returning Patient Form</a>
+							<label class="error">* Download Form and save time at the clinic during your visit</label>
 						</div>
 					</div>
-					<div class="form-div" id="last-visit">
+					<!-- <div class="form-div" id="last-visit">
 						<label>Have you been here in last 6 months?</label>
 						<div class="checkbox-div">
 							<input type="radio" class="" name="last_visit" value="Yes" checked><label>Yes</label>
 							<span style="margin-left:20px;"></span>
 							<input type="radio" name="last_visit" value="No" <?php if(isset($_POST["last_visit"])){ if($_POST["last_visit"] == 'No'){ echo 'checked'; } } ?> ><label>No</label>
 						</div>
-					</div>
+					</div> -->
 					<div class="form-div">
-						<label>Addition Comment</label>
+						<label>Additional Comments</label>
 						<textarea class="form-input" name="comment" value="<?php echo ($_POST["comment"])?esc_attr($_POST["comment"]):'' ?>"><?php echo ($_POST["comment"])?esc_attr($_POST["comment"]):'' ?></textarea>
 					</div>
 				</div>

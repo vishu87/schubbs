@@ -160,17 +160,32 @@ jQuery(document).ready(function(){
         changeYear: true
     });
 
+    // jQuery('.first-visit').click(function(){
+
+    //     var first_visit = jQuery(this).attr('value');
+        
+    //     if(first_visit == "No")
+    //     {
+    //         jQuery('#last-visit').show();       
+    //     }
+    //     else
+    //     {
+    //         jQuery('#last-visit').hide();              
+    //     }
+    // });  
+
     jQuery('.first-visit').click(function(){
 
         var first_visit = jQuery(this).attr('value');
-        
-        if(first_visit == "No")
+        if(first_visit == "Yes")
         {
-            jQuery('#last-visit').show();       
+            jQuery('#first-visit-form').show();
+            jQuery('#last-visit-form').hide();       
         }
-        else
+        else if (first_visit == "No")
         {
-            jQuery('#last-visit').hide();              
+            jQuery('#last-visit-form').show();
+            jQuery('#first-visit-form').hide();       
         }
     });  
 

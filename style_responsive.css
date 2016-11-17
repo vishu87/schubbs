@@ -21,21 +21,32 @@
 		visibility: none;
 	}
 	.home-back {
+		background: url(images/back-home-mobile.jpg);
+		background-size: cover;
 		background-position: center center;
 		padding-left: 0;
 		padding-right: 0;
+		background-repeat: no-repeat;
+	}
+	.blue-back-home {
+		background: #3FB9C9;
+		position: initial;
 	}
 	.header-menu ul {
 		padding-left: 0;
 		text-align: center;
 		padding-top: 30px;
 		display: none;
+		margin-bottom: 0;
 	}
 	.header-menu ul li {
 		display: block;
 		border-bottom: 1px solid #fff;
 		width: 100%;
 		padding: 5px;
+	}
+	.header-menu ul li:last-child {
+		border-bottom: none;
 	}
 	.header-menu ul li a {
 		color: #fff;
@@ -58,22 +69,23 @@
 	#menu-bar {
 		display: block;
 		text-align: right;
+		padding-top: 5px;
 	}
-	#menu-bar img:hover {
-		cursor: pointer;
+	.logo-img {
+		padding-top: 5px;
 	}
 	.banner-big-text {
 		padding-top: 50px;
 	}
 	.banner-big-text h1 {
-		font-size: 19px;
+		font-size: 15px;
 	}
 	.banner-big-text h2 {
-		font-size: 19px;
+		font-size: 15px;
 		margin-top: 0;
 	}
 	.banner-big-text h3 {
-		font-size: 25px;
+		font-size: 20px;
 		margin-top: 0;
 	}
 	.banner-buttons {
@@ -91,7 +103,7 @@
 		display: none;
 	}
 	.banner-buttons-small a:first-child {
-		display: block;
+		display: inline-block;
 	}
 	.why-schubbs-img {
 		padding: 0;
@@ -103,7 +115,7 @@
 	}
 	.testimonial {
 		padding: 20px;
-		margin: 0;
+		/*margin: 0;*/
 	}
 	.sec-title h2 {
 		font-size: 25px;
@@ -133,7 +145,7 @@
 	.clinic-info {
 		display: none;
 	}
-	.multiple-locations {
+	/*.multiple-locations {
 		padding-bottom: 40px;
 		text-align: center;
 	}
@@ -142,26 +154,17 @@
 	}
 	.multiple-locations h3 {
 		font-size: 18px;
-	}
+	}*/
 	.clinics {
 		display: block !important;
 	}
 	.news {
 		padding: 0;
+		margin: 0 10px;
 	}
 	.news-info {
 		padding: 20px;
 		margin-bottom: 10px;
-	}
-	#cal .header span {
-		font-size: 25px;
-	}
-	#cal .header .right.button {
-		right: 10px;
-		font-size: 25px;
-	}
-	#cal td {
-		font-size: 12px;
 	}
 	.appointment-schedule h3 {
 		font-size: 20px;
@@ -194,11 +197,34 @@
 		text-align: center;
 	}
 	.modal {
-		padding: 0 5%;
+		padding: 0;
+	}
+	.modal-left,.modal-right {
+		padding: 10px;
+	}
+	.modal-content.team-modal {
+		background: transparent;
+		border-radius: 0;
+	}
+	.team-modal .team-info {
+		margin: 10px;
 	}
 	.container.location-white-back {
 		margin: 0 15px;
 		padding: 0;
+	}
+	.blogs {
+		min-height: auto;
+		margin-bottom: 30px;
+	}
+	.blog-pagination {
+		margin-bottom: 25px;
+	}
+	.blog-pagination a {
+		font-size: 16px;
+	}
+	.sidebar-blogs {
+		margin-top: 10px;
 	}
 	.footer-logo {
 		text-align: center;
@@ -250,6 +276,21 @@
 	}
 	.search-Form h3 {
 		font-size: 18px;
+	}
+	.search-bar {
+		margin-bottom: 15px;
+	}
+}
+
+@media screen and (min-width: 480px) and (max-width: 780px){
+	#menu-bar {
+		padding-top: 15px;
+	}
+	.banner-big-text h1, .banner-big-text h2 {
+		font-size: 18px;
+	}
+	.banner-big-text h3 {
+		font-size: 25px;
 	}
 }
 

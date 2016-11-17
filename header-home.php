@@ -11,30 +11,30 @@
 
 </head>
 <body>
-<div class="container-fluid home-back">
-	<div class="blue-back blue-back-home">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 col-xs-6">
-					<div class="logo-img">
-						<a href="<?php echo get_home_url();?>"><img src="<?php echo get_template_directory_uri();?>/images/logo.png"></a>
-					</div>
+<div class="blue-back blue-back-home">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 ">
+				<div class="logo-img col-xs-6 col-md-12">
+					<a href="<?php echo get_home_url();?>"><img src="<?php echo get_template_directory_uri();?>/images/logo.png"></a>
 				</div>
+			</div>
+			<div class="col-md-9">
 				<div class="col-xs-6" id="menu-bar">
 					<img src="<?php echo get_template_directory_uri();?>/images/menu_bar.png">
 				</div>
-				<div class="col-md-9 col-xs-12">
-					<nav class="header-menu">
-						<?php 
-							$primary_menu = wp_nav_menu(array(
-								'theme-location'=>'primary-menu','echo'=>false));
-						?>
-						<?php echo preg_replace('/\n/', '', $primary_menu) ?>
-					</nav>
-				</div>
+				<nav class="header-menu">
+					<?php 
+						$primary_menu = wp_nav_menu(array(
+							'theme-location'=>'primary-menu','echo'=>false));
+					?>
+					<?php echo preg_replace('/\n/', '', $primary_menu) ?>
+				</nav>
 			</div>
 		</div>
 	</div>
+</div>
+<div class="container-fluid home-back">
 	<div class="banner-big-text">
 		<h1>Top Quality Dental Services</h1>
 		<h2>International Standards</h2>

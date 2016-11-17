@@ -21,7 +21,7 @@ add_image_size( 'blog-thumb', 370, 234, true );
 
 
 function theme_css_scripts() {
-	// wp_enqueue_script( 'jquery' );
+	
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/bootstrap.min.css', array(), '1.0.0', false );
 	// wp_enqueue_style( 'responsiveTablescss', get_template_directory_uri() . '/responsiveTables/responsive-tables.css', array(), '1.0.0', false );
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array(), '1.0.0', false );

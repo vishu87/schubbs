@@ -24,7 +24,15 @@
 						</div>
 					</div>
 					<div class="blog-info">
-						<a href="<?php echo get_permalink();?>"><h3><?php the_title();?></h3></a>
+						<a href="<?php echo get_permalink();?>">
+							<?php
+								$blog_title = get_the_title();
+								if(strlen($blog_title) > 50) { ?>
+									<h3><?php echo substr($blog_title, 0, 50).'...';?></h3>
+								<?php } else { ?>
+								<h3><?php echo $blog_title; ?></h3>
+							<?php } ?>
+						</a>
 						<span><?php the_time("F j, Y"); ?></span>
 					</div>
 				</div>
@@ -33,5 +41,6 @@
 	</div>
 </div>
 <div class="sep4"></div>
+
 
 <?php get_footer();?>

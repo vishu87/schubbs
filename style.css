@@ -61,6 +61,8 @@ body {
 }
 .blue-back-home {
 	background: rgba(47,176,197,0.85);
+	position: absolute;
+	width: 100%;
 }
 .logo-img img {
 	width: 100%;
@@ -92,6 +94,9 @@ body {
 }
 #menu-bar {
 	display: none;
+}
+#menu-bar:hover {
+	cursor: pointer;
 }
 .banner-big-text {
 	text-align: center;
@@ -162,7 +167,7 @@ body {
 	color: #002434;
 	border-bottom: 3px solid #3FB9C9;
 }
-.sec-title-blue h5 {
+.blog-title h5 {
 	font-size: 13px;
     font-style: italic;
     margin-bottom: 0;
@@ -250,6 +255,7 @@ body {
 	background: #fff;
 	margin: 0 15px;
 	padding: 20px 40px;
+	border: 1px solid #ccc;
 }
 .testimonial h3,.testimonial h5 {
 	margin-top: 0;
@@ -386,142 +392,32 @@ body {
 	margin-bottom: 20px;
 	font-weight: 600;
 }
-/*.calender-div {
-	border: 1px solid #ccc;
-}*/
-/****Calender CSS***/
 
-/*#cal {
-	width: 100%;
-	font: 13px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-	display:table;
-	box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25);
-	-moz-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25);
-	-webkit-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25);
-}
-
-#cal .header {
-	cursor:default;
-	background: #C8E1EA;
-	position:relative;
-	color: #002434;
-	width: 100%;
-	padding: 20px 0;
-	text-transform: uppercase;
-	border-bottom: 1px solid #ccc;
-
-}
-#cal .header span {
-	display:inline-block;
-	line-height:34px;
-	font-size: 30px;
-}
-#cal .header .right.button {
-	right:150px;
-	top:17px;
-	font-size: 30px; 
-	width:24px;
-	position:absolute;
-}
-
-#cal .header .month-year {
-	letter-spacing:1px;
-	width:100%;
-	text-align:center;
-}
-
-#cal table.curr thead {
-	background: #E1EDF3;
-}
-#cal table.curr thead td {
-	text-transform: capitalize;
-	color: #3FB9C9;
-	font-weight: bold;
-}
-
-#cal table {
-	background:#fff;
-	border-collapse: collapse;
-	width: 100%;
-}
-#cal tr {
-	border-bottom: 1px solid #ccc;
-}
-#cal td {
-	color:#2d2d2d;
-	line-height:30px;
-	text-align:center;
-	cursor:default;
-	padding: 5px;
-	font-size: 16px;
-}
-
-#cal #day td {
-	height:26px;
-	line-height:26px;
-	text-transform:uppercase;
-	font-size:90%;
-	color:#9e9e9e;
-}
-#cal #cal-frame td.today {
-	background:#ededed;
-	color:#8c8c8c8;
-	box-shadow:1px 1px 0px #fff inset;
-	-moz-box-shadow:1px 1px 0px #fff inset;
-	-webkit-box-shadow:1px 1px 0px #fff inset;
-}
-
-#cal #cal-frame td:not(.nil):hover {
-	color:#fff;
-	text-shadow:#6c1a07 0px -1px;
-	background:#3FB9C9;
-	box-shadow:0px 0px 0px;
-	-moz-box-shadow:0px 0px 0px;
-	-webkit-box-shadow:0px 0px 0px;
-}*/
-
-/*** Calender CSS End **/
-
-/*.appointment-schedule {
-	clear: both;
-	padding: 20px 30px;
-	background: #E1EDF3;
-	text-align: center;
-}
-.appointment-schedule h3 {
-	margin: 0;
-}
-.appoint-timing {
-	background: #002434;
-	color: #fff;
-	font-size: 18px;	
-	margin: 10px 0;
-	padding: 10px 0;
-}
-.next-btn {
-	font-size: 20px;
-	text-transform: uppercase;
-}
-.next-btn img {
-	width: 16px;
-	height: auto;
-	margin-top: -3px;
-	margin-left: 5px;
-}
-.appoint-timing:hover {
-	background: #3FB9C9;
-	cursor: pointer;
-}
-.appointment-content {
-	padding-left: 20px;
-}*/
 .appoint-form .blue-btn {
 	font-size: 16px;
 	font-weight: 600;
 }
-#last-visit {
+
+.visit-form {
+}
+.visit-form a {
+	text-decoration: none;
+    color: #fff;
+    background: #002434;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+	margin: 5px 0;
+}
+#first-visit-form {
 	display: none;
 }
+#last-visit-form {
+	display: none;
+}
+/*#last-visit {
+	display: none;
+}*/
 
 /**** About Us.php ****/
 
@@ -604,7 +500,7 @@ body {
 /**** Blog.php ****/
 
 .blogs {
-	min-height: 340px;
+	min-height: 370px;
 }
 .blogs:nth-child(3) {
 	clear: both;
@@ -623,7 +519,7 @@ body {
 }
 .blog-info h3 {
 	font-weight: 600;
-	margin-bottom: 0;
+	margin-bottom: 5px;
 }
 .blog-info span {
 	font-style: italic;
@@ -785,7 +681,7 @@ body {
 	border-radius: 10px; 
 }
 .footer-social {
-	padding-top: 18px;
+	padding-top: 14px;
 	float: right;
 }
 .footer-social ul {
@@ -796,7 +692,7 @@ body {
 	list-style-type: none;
 }
 .footer-social ul li a img {
-	width: 25px;
+	width: 30px;
 	height: auto;
 }
 .copyright {
@@ -835,6 +731,7 @@ body {
 .modal-content.team-modal {
 	padding: 0 !important;
 	min-height: auto;
+	background: #002434;
 }
 .modal-left {
 	/*background:#3FB9C9;*/

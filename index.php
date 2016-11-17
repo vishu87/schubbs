@@ -69,7 +69,7 @@
 						"subject" => $index_subject,
 						"message" => $index_message
 					));
-					$to = 'shubhambhatt52@gmail.com';
+					$to = 'frontoffice@schubbsdental.com';
 					$subject = 'Contact form Schubbs Dental Clinic';
 					$message = 'Name: '.$index_full_name.'<br>Email: '.$index_email.'<br> Mobile: '.$index_mobile.'<br> Message: '.$index_message.'<br> Subject: '.$index_subject.'<br> Message: '.$index_message;
 					$headers = array('Content-Type: text/html; charset=UTF-8');
@@ -161,7 +161,7 @@
 </div>
 <div class="container white-back">
 	<div class="sec-title sec-title-blue">
-		<h2>Impressive Stats</h2>
+		<h2>Our Journey So Far</h2>
 	</div>
 	<div class="sep3"></div>
 	<div id="animate-no" class="row">
@@ -396,7 +396,13 @@
 						<?php the_post_thumbnail();?>
 					</div>
 					<div class="news-text">
-						<h3><?php the_title();?></h3>
+						<?php
+							$home_news_title = get_the_title();
+							if(strlen($home_news_title) > 30) { ?>
+								<a href="<?php echo get_permalink();?>"><h3><?php echo substr($home_news_title, 0, 30).'...';?></h3></a>
+							<?php } else { ?>
+								<a href="<?php echo get_permalink();?>"><h3><?php echo $home_news_title; ?></h3></a>
+							<?php } ?>
 						<a href="<?php the_permalink();?>">
 							<p><?php the_excerpt();?></p>
 						</a>

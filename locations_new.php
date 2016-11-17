@@ -29,6 +29,9 @@
 					<div class="loc-gal-img">
 						<img src="<?php echo get_template_directory_uri();?>/images/Apapa-Nigeria.jpg">
 					</div>
+					<div class="loc-gal-img">
+						<img src="<?php echo get_template_directory_uri();?>/images/apapa-gallery1.jpg">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -55,6 +58,9 @@
 					</div>
 					<div class="loc-gal-img">
 						<img src="<?php echo get_template_directory_uri();?>/images/ikoyi-gallery1.jpg">
+					</div>
+					<div class="loc-gal-img">
+						<img src="<?php echo get_template_directory_uri();?>/images/ikoyi-gallery2.jpg">
 					</div>
 				</div>
 			</div>
