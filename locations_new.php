@@ -75,7 +75,7 @@
 				<div class="location-info">
 					<span>11A Isaac John Street (Near IPNX Ikeja Office) GRA, Ikeja, Lagos, Nigeria</span><br>
 					<div class="sep1"></div>
-					<span>P: +(01) 342 9191</span><br>
+					<span>P: +(01) 632 2086</span><br>
 					<span>P: +(070) 463 10735</span><br>
 					<span>P: +(070) 463 10738</span><br>
 					<img src="<?php echo get_template_directory_uri();?>/images/direction-icon.png"><a class="direction-link" href="https://www.google.com/maps/place/Schubbs+Dental+Clinic/@6.5743243,3.3615309,17z/data=!4m5!3m4!1s0x103b92730ae2214b:0xf2c41690caf905a2!8m2!3d6.5738873!4d3.3614129?hl=en-US" target="_blank">Get Directions</a>

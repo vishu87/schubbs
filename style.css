@@ -68,6 +68,7 @@ body {
 	width: 100%;
 	height: auto;
 	max-width: 220px;
+	min-width: 150px;
 }
 .header-menu ul {
 	text-align: right;
@@ -94,6 +95,10 @@ body {
 }
 #menu-bar {
 	display: none;
+}
+#menu-bar img {
+	width: 32px;
+	height: auto;
 }
 #menu-bar:hover {
 	cursor: pointer;
@@ -205,7 +210,7 @@ body {
 	border-top-right-radius:15px;
 }
 .stats-img img {
-	width: 100%;
+	/*max-width: 100%;*/
 }
 .stats-text {
 	padding: 10px 20px;
@@ -269,7 +274,7 @@ body {
 	font-weight: 600;	
 }
 .testimonial-text {
-	min-height: 120px;
+	min-height: 70px;
 }
 .testimonial a {
 	color: #002434;
@@ -500,7 +505,7 @@ body {
 /**** Blog.php ****/
 
 .blogs {
-	min-height: 370px;
+	min-height: 450px;
 }
 .blogs:nth-child(3) {
 	clear: both;
@@ -524,9 +529,12 @@ body {
 .blog-info span {
 	font-style: italic;
 	font-size: 13px;
+	display: block;
+	margin-bottom: 10px;
 }
 .blog-info p {
 	margin-bottom: 0;
+	font-size: 18px;
 }
 .blog-opac {
 	display: none;
@@ -1022,6 +1030,10 @@ span.red-asterik {
     color: #f00;
     font-size: 20px;
     margin-bottom: 20px;
+}
+.test-back .div-success {
+	margin: 0 35%;
+	width:350px;
 }
 .div-success{
 	margin: 10px 0;

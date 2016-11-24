@@ -11,7 +11,7 @@
 		<?php 
 			$query = new WP_Query(array(
 				'post_type'=>'post', 
-				'posts_per_page'=>6
+				'posts_per_page'=> 6
 			)); 
 		?>
 		<?php if($query->have_posts()):while($query->have_posts()): $query->the_post(); ?>
@@ -34,6 +34,15 @@
 							<?php } ?>
 						</a>
 						<span><?php the_time("F j, Y"); ?></span>
+						<a href="<?php echo get_permalink();?>">
+							<?php
+								$blog_content = get_the_excerpt();
+								if(strlen($blog_content) > 100) { ?>
+									<p><?php echo substr($blog_content, 0, 100).'...';?></p>
+								<?php } else { ?>
+									<p><?php echo $blog_content; ?></p>
+							<?php } ?>
+						</a>
 					</div>
 				</div>
 			</div>

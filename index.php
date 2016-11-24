@@ -70,7 +70,7 @@
 						"message" => $index_message
 					));
 					$to = 'frontoffice@schubbsdental.com';
-					$subject = 'Contact form Schubbs Dental Clinic';
+					$subject = 'Contact Form Schubbs Dental Clinic';
 					$message = 'Name: '.$index_full_name.'<br>Email: '.$index_email.'<br> Mobile: '.$index_mobile.'<br> Message: '.$index_message.'<br> Subject: '.$index_subject.'<br> Message: '.$index_message;
 					$headers = array('Content-Type: text/html; charset=UTF-8');
 					wp_mail( $to, $subject, $message, $headers );
@@ -138,7 +138,7 @@
 			</div>
 			<div class="col-md-6 col-xs-6">
 				<div class="why-schubbs-img">
-					<img src="<?php echo get_template_directory_uri();?>/images/experienced-dentists.jpg">
+					<img src="<?php echo get_template_directory_uri();?>/images/child-friendly.jpg">
 					<h2>Child-friendly Environment</h2>
 				</div>
 			</div>
@@ -183,7 +183,7 @@
 				</div>
 				<div class="stats-text">
 					<h1 id="dentists-no">12</h1>
-					<p>Number of dentist</p>
+					<p>Number of dentists</p>
 				</div>
 			</div>
 		</div>
@@ -223,26 +223,30 @@
 			$query = new WP_Query(array( 
 				'post_type'   => 'testimonial',
 				'posts_per_page' => -1
-				) 
-			);
+			));
 
 			if($query->have_posts()): while($query->have_posts()): $query->the_post();
 			?>
 			<div class="testimonial">
 				<?php
 					$test_title = get_the_title();
-					if(strlen($test_title) > 5) { ?>
+					if(strlen($test_title) > 8) { ?>
 						<h3><?php echo substr($test_title, 0, 8).'.';?></h3>
 					<?php } else { ?>
 						<h3><?php echo $test_title; ?></h3>
 					<?php } ?>
 				<div class="testimonial-text">
-					<a href="<?php the_permalink();?>"><p><?php the_excerpt();?></p></a>
+					<?php $test_content = get_the_excerpt();
+					if(strlen($test_content) > 100) { ?>
+						<a href="<?php the_permalink();?>"><p><?php echo substr($test_content, 0, 100).'...'?></p></a>
+					<?php } else { ?>
+						<a href="<?php the_permalink();?>"><p><?php echo $test_content; ?></p></a>
+					<?php } ?>
 				</div>
 				<hr>
 				<?php
 					$test_title = get_the_title();
-					if(strlen($test_title) > 5) { ?>
+					if(strlen($test_title) > 8) { ?>
 						<h5><?php echo substr($test_title, 0, 8).'.';?></h5>
 					<?php } else { ?>
 						<h5><?php echo $test_title; ?></h5>
@@ -252,7 +256,7 @@
 		</div>
 		<div class="sep2"></div>
 		<?php if($_GET["test_submit"]){ ?>
-			<div style="margin: 0 35%;width:350px;" class="div-success">
+			<div class="div-success">
 				Thank You for Adding Your Review.
 			</div>
 			<?php } else {?>
@@ -397,15 +401,20 @@
 					</div>
 					<div class="news-text">
 						<?php
-							$home_news_title = get_the_title();
-							if(strlen($home_news_title) > 30) { ?>
-								<a href="<?php echo get_permalink();?>"><h3><?php echo substr($home_news_title, 0, 30).'...';?></h3></a>
-							<?php } else { ?>
-								<a href="<?php echo get_permalink();?>"><h3><?php echo $home_news_title; ?></h3></a>
-							<?php } ?>
-						<a href="<?php the_permalink();?>">
-							<p><?php the_excerpt();?></p>
-						</a>
+						$home_news_title = get_the_title();
+						
+						if(strlen($home_news_title) > 25) { ?>
+							<a href="<?php echo get_permalink();?>"><h3><?php echo substr($home_news_title, 0, 25).'...';?></h3></a>
+						<?php } else { ?>
+							<a href="<?php echo get_permalink();?>"><h3><?php echo $home_news_title; ?></h3></a>
+						<?php } ?>
+						
+						<?php $home_news_content = get_the_excerpt();
+						if(strlen($home_news_content) > 125) { ?>
+							<a href="<?php the_permalink();?>"><p><?php echo substr($home_news_content, 0, 125).'...';?></p></a>
+						<?php } else { ?>
+							<a href="<?php the_permalink();?>"><p><?php echo $home_news_content; ?></p></a>
+						<?php } ?>
 					</div>
 				</div>
 			</div>

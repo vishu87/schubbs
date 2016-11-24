@@ -69,7 +69,7 @@
 	#menu-bar {
 		display: block;
 		text-align: right;
-		padding-top: 5px;
+		padding-top: 2%;
 	}
 	.logo-img {
 		padding-top: 5px;
@@ -117,6 +117,10 @@
 		padding: 20px;
 		/*margin: 0;*/
 	}
+	.test-back .div-success {
+		margin: 0;
+		width:100%;
+	}
 	.sec-title h2 {
 		font-size: 25px;
 	}
@@ -126,6 +130,10 @@
 	}
 	.stats-img {
 		margin: 0 8px;
+	}
+	.stats-img img {
+		width: 100px;
+		max-width: 100%;
 	}
 	.stats-text {
 		min-height: 130px;
@@ -155,6 +163,9 @@
 	.multiple-locations h3 {
 		font-size: 18px;
 	}*/
+	.locations {
+		text-align: center;
+	}
 	.clinics {
 		display: block !important;
 	}
@@ -208,6 +219,9 @@
 	}
 	.team-modal .team-info {
 		margin: 10px;
+	}
+	.close {
+	    font-size: 30px;
 	}
 	.container.location-white-back {
 		margin: 0 15px;
