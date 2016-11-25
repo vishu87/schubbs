@@ -167,8 +167,8 @@
 	<div id="animate-no" class="row">
 		<div class="col-md-3 col-xs-6">
 			<div class="stats-sec">
-				<div class="stats-img">
-					<img src="<?php echo get_template_directory_uri();?>/images/stat-img1.png">
+				<div class="stats-img one">
+					<img src="<?php echo get_template_directory_uri();?>/images/section1.jpg">
 				</div>
 				<div class="stats-text">
 					<h1 id="implants-no">2062</h1>
@@ -178,8 +178,8 @@
 		</div>
 		<div class="col-md-3 col-xs-6">
 			<div class="stats-sec">
-				<div class="stats-img">
-					<img src="<?php echo get_template_directory_uri();?>/images/stat-img2.png">
+				<div class="stats-img ">
+					<img src="<?php echo get_template_directory_uri();?>/images/section2.jpg">
 				</div>
 				<div class="stats-text">
 					<h1 id="dentists-no">12</h1>
@@ -189,8 +189,8 @@
 		</div>
 		<div class="col-md-3 col-xs-6">
 			<div class="stats-sec">
-				<div class="stats-img">
-					<img src="<?php echo get_template_directory_uri();?>/images/stat-img3.png">
+				<div class="stats-img three">
+					<img src="<?php echo get_template_directory_uri();?>/images/section3.jpg">
 				</div>
 				<div class="stats-text">
 					<h1 id="braces-no">6450</h1>
@@ -200,8 +200,8 @@
 		</div>
 		<div class="col-md-3 col-xs-6">
 			<div class="stats-sec">
-				<div class="stats-img">
-					<img src="<?php echo get_template_directory_uri();?>/images/stat-img4.png">
+				<div class="stats-img four">
+					<img src="<?php echo get_template_directory_uri();?>/images/section4.jpg">
 				</div>
 				<div class="stats-text">
 					<h1 id="operations-no">28</h1>
@@ -337,7 +337,7 @@
 						<div class="clinic">
 							<h4>Ikeja Clinic</h4>
 							<p>11A Isaac John Street(Near IPNX Ikeja Office)GRA, Ikeja, Lagos, Nigeria<br>
-							P: +(01) 342 9191<br>
+							P: +(01) 632 2086<br>
 							P: +(070) 463 10735<br>
 							P: +(070) 463 10738
 							</p>
@@ -351,26 +351,26 @@
 					<div class="clinic">
 						<h4>Apapa Clinic</h4>
 						<p>5 Douala Road Apapa, Lagos, Nigeria(Near Apapa Post Office)<br>
-						P: (080)505 - 57574<br>
-						P: (080)348 - 49005<br>
-						P: (070)463 - 10733
+						P: +(080) 505 575 74<br>
+						P: +(080) 348 490 05<br>
+						P: +(070) 463 107 33
 						</p>
 					</div>
 					<div class="clinic">
 						<h4>Ikoyi Clinic</h4>
 						<p>22B Milverton Road Ikoyi, Lagos, Nigeria(Near St. Saviour's School Ikoyi)<br>
-						P: (01)279 - 8232<br>
-						P: (01)279 - 8233<br>
-						P: (080)668 - 56109<br>
-						P: (070)463 - 10734
+						P: +(01) 279 8232<br>
+						P: +(01) 279 8233<br>
+						P: +(080) 668 56109<br>
+						P: +(070) 463 10734
 						</p>
 					</div>
 					<div class="clinic">
 						<h4>Ikeja Clinic</h4>
 						<p>11A Isaac John Street(Near IPNX Ikeja Office)GRA, Ikeja, Lagos, Nigeria<br>
-						P: (01)342 - 9191<br>
-						P: (070)463 - 10735<br>
-						P: (070)463 - 10738
+							P: +(01) 632 2086<br>
+							P: +(070) 463 10735<br>
+							P: +(070) 463 10738
 						</p>
 					</div>
 				</div>

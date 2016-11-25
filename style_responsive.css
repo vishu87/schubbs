@@ -130,10 +130,12 @@
 	}
 	.stats-img {
 		margin: 0 8px;
+		min-height: 160px;
 	}
 	.stats-img img {
-		width: 100px;
+		/*width: 100px;*/
 		max-width: 100%;
+		margin-top: 20px;
 	}
 	.stats-text {
 		min-height: 130px;
@@ -213,9 +215,15 @@
 	.modal-left,.modal-right {
 		padding: 10px;
 	}
+	.modal-content {
+		width: 92%;
+		margin-left: 15px;
+	}
 	.modal-content.team-modal {
 		background: transparent;
 		border-radius: 0;
+		width: 100%;
+		margin-left: 0;
 	}
 	.team-modal .team-info {
 		margin: 10px;

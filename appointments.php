@@ -1,3 +1,5 @@
+
+
 <?php /* Template Name: Appointments 3 */
 	global $wpdb;
 	$flag_error = '';
@@ -15,14 +17,20 @@
 			$first_visit = (isset($_POST["first_visit"]))?esc_attr($_POST["first_visit"]):'';
 			$last_visit = (isset($_POST["last_visit"]))?esc_attr($_POST["last_visit"]):'';
 			$comment = (isset($_POST["comment"]))?esc_attr($_POST["comment"]):'';
+			$captcha_ans = (isset($_POST["answer"]))?esc_attr($_POST["answer"]):'';
 
 
-			if($full_name && $email && $mobile && $appoint_date && $appoint_time && $location){
+			if($full_name && $email && $mobile && $appoint_date && $appoint_time && $location && $captcha_ans){
 
 				$check_preg = true;
 				if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
 					$flag_error = "Please provide a valid email address";
 					$check_preg = false;
+				}
+
+				if ($captcha_ans != $captcha_rslt) {
+				    $flag_error = "Invalid Captcha";
+				    $check_preg = false;
 				}
 
 				if($check_preg){
@@ -67,6 +75,19 @@
 		} else {
 			$flag_error = 'Invalid Request';
 		}
+	}
+?>
+<?php 
+	$digit1 = mt_rand(1,20);
+	$digit2 = mt_rand(1,20);
+	if( mt_rand(0,1) === 1 ) {
+	    $math = "$digit1 + $digit2";
+	    $captcha_rslt = $digit1 + $digit2;
+	    echo $captcha_rslt;
+	} else {
+	    $math = "$digit1 - $digit2";
+	    $captcha_rslt = $digit1 - $digit2;
+	    echo $captcha_rslt;
 	}
 ?>
 <?php get_header(); the_post(); ?>
@@ -193,6 +214,10 @@
 					<div class="form-div">
 						<label>Additional Comments</label>
 						<textarea class="form-input" name="comment" value="<?php echo ($_POST["comment"])?esc_attr($_POST["comment"]):'' ?>"><?php echo ($_POST["comment"])?esc_attr($_POST["comment"]):'' ?></textarea>
+					</div>
+					<div>
+						<?php echo $math; ?> = <input name="answer" type="text">
+						
 					</div>
 				</div>
 			</div>

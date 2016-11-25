@@ -208,9 +208,17 @@ body {
 	border-bottom: none;
 	border-top-left-radius:15px;
 	border-top-right-radius:15px;
+	min-height: 170px; 
 }
-.stats-img img {
-	/*max-width: 100%;*/
+.stats-img
+.stats-img.one img{
+	margin-top: 10px;
+}
+.stats-img.three img {
+	margin-top: 40px !important;
+}
+.stats-img.four img {
+	margin-top: 25px !important;
 }
 .stats-text {
 	padding: 10px 20px;
