@@ -213,7 +213,7 @@
 		padding: 0;
 	}
 	.modal-left,.modal-right {
-		padding: 10px;
+		padding: 20px;
 	}
 	.modal-content {
 		width: 92%;
@@ -228,8 +228,19 @@
 	.team-modal .team-info {
 		margin: 10px;
 	}
+	.team-info .row{
+		display: block;
+	}
+
+	.team-info .row > div {
+		display: block;
+		width: auto;
+	}
+	.team-info .row > div.modal-image{
+		display: none;
+	}
 	.close {
-	    font-size: 30px;
+	    
 	}
 	.container.location-white-back {
 		margin: 0 15px;

@@ -24,7 +24,7 @@
 		<?php 
 			if($query->have_posts()): while($query->have_posts()): $query->the_post(); 
 		?>
-		<div class="col-md-3">
+		<div class="col-md-3 col-sm-6">
 			<div class="team-member" data-id="<?php the_ID(); ?>">
 				<div class=" team-member-img">
 					<?php the_post_thumbnail();?>
@@ -36,7 +36,7 @@
 				<div class="" id="member-info-<?php the_ID(); ?>">
 					<div class="team-info">
 						<div class="row">
-							<div class="col-md-5 padd-0">
+							<div class="col-md-5 padd-0 modal-image">
 						    	<div class="modal-left">
 						    		<div class="team-member-img">
 										<?php the_post_thumbnail();?>
@@ -49,7 +49,7 @@
 						    	</div>
 						    </div>
 						    <div class="col-md-7 padd-0">
-						    	<div class="close">x</div>
+						    	<div class="close"></div>
 						    	<div class="modal-right">
 						    		<?php the_content();?>
 						    		<div class="sep1"></div>

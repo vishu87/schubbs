@@ -746,8 +746,8 @@ body {
 }
 .modal-content.team-modal {
 	padding: 0 !important;
-	min-height: auto;
-	background: #002434;
+	min-height: 100px;
+	background: transparent;
 }
 .modal-left {
 	/*background:#3FB9C9;*/
@@ -765,21 +765,23 @@ body {
 
 /* The Close Button */
 .close {
-    color: #3FB9C9;
-    font-size: 18px;
-    font-weight: 300;
     opacity: 1;
     text-shadow: none;
     position: absolute;
     right: 5px;
-    top: 0;
+    top: 5px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    background: url(images/cross.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center center;
+
 }
 
 .close:hover, .close:focus {
-    color: #3FB9C9 !important;
-    opacity: 1 !important;
-    text-decoration: none;
-    cursor: pointer;
+    
 }
 
 /***** Locations CSS *****/
