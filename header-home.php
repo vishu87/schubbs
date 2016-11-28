@@ -14,15 +14,18 @@
 <div class="blue-back blue-back-home">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3 ">
-				<div class="logo-img col-xs-6 col-md-12">
+			<div class="col-md-3 col-xs-6">
+				<div class="logo-img">
 					<a href="<?php echo get_home_url();?>"><img src="<?php echo get_template_directory_uri();?>/images/logo.png"></a>
 				</div>
-			</div>
-			<div class="col-md-9">
-				<div class="col-xs-6" id="menu-bar">
-					<img src="<?php echo get_template_directory_uri();?>/images/menu_bar.png">
+				<div class="logo-img-small">
+					<a href="<?php echo get_home_url();?>"><img src="<?php echo get_template_directory_uri();?>/images/logo_small.png"></a>
 				</div>
+			</div>
+			<div class="col-xs-6" id="menu-bar">
+				<img src="<?php echo get_template_directory_uri();?>/images/menu_bar.png">
+			</div>
+			<div class="col-md-9 col-xs-12">
 				<nav class="header-menu">
 					<?php 
 						$primary_menu = wp_nav_menu(array(

@@ -30,7 +30,7 @@
 					<?php the_content();?>
 				</div>
 				<div class="sep1"></div>
-				<div class="blog-pagination">
+				<div class="blog-pagination" style="display: none">
 					<div class="row">
 						<div class="col-md-6 col-xs-6">
 							<div class="blog-btns blog-prev">

@@ -70,9 +70,20 @@
 		display: block;
 		text-align: right;
 		padding-top: 2%;
+		cursor: pointer;
 	}
-	.logo-img {
+	.logo-img{
+		display: none;
+	}
+	.logo-img-small {
+		display: block;
 		padding-top: 5px;
+	}
+	.logo-img-small img{
+		width: 150px;
+		height: auto;
+		min-width: 150px;
+		max-width: 150px;
 	}
 	.banner-big-text {
 		padding-top: 50px;
@@ -128,9 +139,13 @@
 		margin: 0;
 		margin-bottom: 30px;
 	}
+	#animate-no > div:nth-child(2n+1){
+		clear: both;
+	}
 	.stats-img {
 		margin: 0 8px;
-		min-height: 160px;
+		height: 165px;
+		overflow: hidden;
 	}
 	.stats-img img {
 		/*width: 100px;*/
@@ -312,6 +327,9 @@
 	}
 	.search-bar {
 		margin-bottom: 15px;
+	}
+	.form-div .col-md-6:last-child{
+		margin-top: 20px;
 	}
 }
 

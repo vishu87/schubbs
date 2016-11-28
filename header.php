@@ -18,6 +18,9 @@
 				<div class="logo-img">
 					<a href="<?php echo get_home_url();?>"><img src="<?php echo get_template_directory_uri();?>/images/logo.png"></a>
 				</div>
+				<div class="logo-img-small">
+					<a href="<?php echo get_home_url();?>"><img src="<?php echo get_template_directory_uri();?>/images/logo_small.png"></a>
+				</div>
 			</div>
 			<div class="col-xs-6" id="menu-bar">
 				<img src="<?php echo get_template_directory_uri();?>/images/menu_bar.png">

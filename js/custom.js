@@ -69,13 +69,6 @@ jQuery(document).ready(function(){
         jQuery(".header-menu ul").slideToggle();
     });
 
-    // jQuery("ul.centers-tabs li").click(function() {
-    //     var data_id = jQuery(this).attr("data-id");
-	   //  jQuery("li").removeClass("active");
-	   //  jQuery(this).addClass("active");
-    //     jQuery(".center-content").removeClass("active");
-    //     jQuery("#tab-"+data_id).addClass("active");
-   	// });
 
     var modal = document.getElementById('myModal');
 
@@ -120,33 +113,6 @@ jQuery(document).ready(function(){
         jQuery("."+ansId).slideToggle();
     });
 
-    /*--------- Location Map Changer ----------*/
-
-    // jQuery('.location1').click(function(){
-    //     jQuery(this).addClass('loc-active');
-    //     jQuery('.location2').removeClass('loc-active');
-    //     jQuery('.location3').removeClass('loc-active');
-    //     jQuery('#loc-1').show();
-    //     jQuery('#loc-2').hide(); 
-    //     jQuery('#loc-3').hide();
-    // });
-    // jQuery('.location2').click(function(){
-    //     jQuery(this).addClass('loc-active');
-    //     jQuery('.location1').removeClass('loc-active');
-    //     jQuery('.location3').removeClass('loc-active');
-    //     jQuery('#loc-2').show();
-    //     jQuery('#loc-1').hide(); 
-    //     jQuery('#loc-3').hide();
-    // });
-    // jQuery('.location3').click(function(){
-    //     jQuery(this).addClass('loc-active');
-    //     jQuery('.location1').removeClass('loc-active');
-    //     jQuery('.location2').removeClass('loc-active');
-    //     jQuery('#loc-3').show();
-    //     jQuery('#loc-1').hide(); 
-    //     jQuery('#loc-2').hide();
-    // });
-
     /*----- Validation -----*/
 
     jQuery("#testimonial-form").validate();
@@ -158,21 +124,7 @@ jQuery(document).ready(function(){
         dateFormat: 'dd-mm-yy',
         changeMonth: true,
         changeYear: true
-    });
-
-    // jQuery('.first-visit').click(function(){
-
-    //     var first_visit = jQuery(this).attr('value');
-        
-    //     if(first_visit == "No")
-    //     {
-    //         jQuery('#last-visit').show();       
-    //     }
-    //     else
-    //     {
-    //         jQuery('#last-visit').hide();              
-    //     }
-    // });  
+    }); 
 
     jQuery('.first-visit').click(function(){
 
@@ -187,6 +139,29 @@ jQuery(document).ready(function(){
             jQuery('#last-visit-form').show();
             jQuery('#first-visit-form').hide();       
         }
-    });  
+    });
 
+});
+
+// reload captcha
+jQuery(document).on('click','.reload-captcha', function(e){
+    e.preventDefault();
+    var url = base_url + "wp-admin/admin-ajax.php";
+    var captcha = jQuery(".captcha-image");
+    var prefix = jQuery("#prefix");
+    jQuery(".reload-captcha").find('.fa-refresh').addClass('fa-spin');
+    var data = {
+        'action': 'captcha'
+    };
+
+    jQuery.post(url, data, function(data ){
+        data = JSON.parse(data);
+        if(data.success){
+          captcha.html('<img src="'+data.img_url+'" >');
+          prefix.val(data.prefix);
+        } else {
+          alert('error getting new captcha');
+        }
+        jQuery(".reload-captcha").find('.fa-refresh').removeClass('fa-spin');
+    });
 });

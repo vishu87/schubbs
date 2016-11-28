@@ -113,7 +113,7 @@
 						<div class="form-div">
 							<input type='submit' class="blue-btn" value="Submit" >
 						</div>
-						<span class="close">x</span>
+						<span class="close"></span>
 					</form>
 				</div>
 		  	</div>
@@ -397,7 +397,7 @@
 			<div class="news">
 				<div class="news-info">
 					<div class="news-img">
-						<?php the_post_thumbnail();?>
+						<a href="<?php echo get_permalink();?>"><?php the_post_thumbnail();?></a>
 					</div>
 					<div class="news-text">
 						<?php

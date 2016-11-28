@@ -39,9 +39,9 @@
 		</div>
 	</div>
 </div>
-
+<script type="text/javascript">
+	var base_url = '<?php echo esc_url( home_url( '/' ) ); ?>';
+</script>
 <?php wp_footer(); ?>
-
-
 </body>
 </html>
