@@ -15,7 +15,7 @@
 			)); 
 		?>
 		<?php if($query->have_posts()):while($query->have_posts()): $query->the_post(); ?>
-			<div class="col-md-4">
+			<div class="col-md-4 col-sm-6">
 				<div class="blogs">
 					<div class="blog-img">
 						<a href="<?php echo get_permalink();?>"><?php the_post_thumbnail('blog-thumb');?></a>

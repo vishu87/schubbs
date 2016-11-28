@@ -29,7 +29,7 @@ function theme_css_scripts() {
 
  	//main css
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
-	wp_enqueue_style( 'style_responsive', get_template_directory_uri().'/style_responsive.css',array(),'1.0.0',false );
+	wp_enqueue_style( 'style_responsive', get_template_directory_uri().'/style_responsive.css',array(),'1.0.1',false );
 	wp_enqueue_style('datepicker-css','//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css', array(), '1.0.0', false);
 
 	wp_enqueue_script('jquery');
@@ -39,7 +39,7 @@ function theme_css_scripts() {
 	wp_enqueue_script( 'datepicker-ui-js','//code.jquery.com/ui/1.10.3/jquery-ui.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'animate-number', get_template_directory_uri() . '/js/jquery.animateNumber.min.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'validate', get_template_directory_uri() . '/js/jquery.validate.js', array(), '1.0.0', true );
-	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array(), '1.0.1', true );
 
 
 }
