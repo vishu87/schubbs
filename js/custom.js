@@ -11,7 +11,7 @@ jQuery(document).ready(function(){
             });
             jQuery('#implants-no').animateNumber({ number: 2062 },2000);
             jQuery('#dentists-no').animateNumber({ number: 12 },1000);
-            jQuery('#braces-no').animateNumber({ number: 6450 },2000);
+            jQuery('#braces-no').animateNumber({ number: 4392 },2000);
             jQuery('#operations-no').animateNumber({ number: 28 },2000);
             show_no = 1;
             }

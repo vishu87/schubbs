@@ -193,7 +193,7 @@
 					<img src="<?php echo get_template_directory_uri();?>/images/section3.jpg">
 				</div>
 				<div class="stats-text">
-					<h1 id="braces-no">6450</h1>
+					<h1 id="braces-no">4392</h1>
 					<p>Number of braces done</p>
 				</div>
 			</div>
@@ -317,29 +317,29 @@
 					<div class="clinic-info">
 						<div class="clinic">
 							<h4>Apapa Clinic</h4>
-							<p>5 Douala Road Apapa, Lagos, Nigeria(Near Apapa Post Office)<br>
-							P: +(080) 505 575 74<br>
-							P: +(080) 348 490 05<br>
-							P: +(070) 463 107 33
+							<p>5 Douala Road Apapa, Lagos, Nigeria (Near Apapa Post Office)<br>
+							P: (080) 505 575 74<br>
+							P: (080) 348 490 05<br>
+							P: (070) 463 107 33
 							</p>
 						</div>
 						<hr>
 						<div class="clinic">
 							<h4>Ikoyi Clinic</h4>
-							<p>22B Milverton Road Ikoyi, Lagos, Nigeria(Near St. Saviour's School Ikoyi)<br>
-							P: +(01) 279 8232<br>
-							P: +(01) 279 8233<br>
-							P: +(080) 668 56109<br>
-							P: +(070) 463 10734
+							<p>22B Milverton Road Ikoyi, Lagos, Nigeria (Near St. Saviour's School Ikoyi)<br>
+							P: (01) 279 8232<br>
+							P: (01) 279 8233<br>
+							P: (080) 668 56109<br>
+							P: (070) 463 10734
 							</p>
 						</div>
 						<hr>
 						<div class="clinic">
 							<h4>Ikeja Clinic</h4>
-							<p>11A Isaac John Street(Near IPNX Ikeja Office)GRA, Ikeja, Lagos, Nigeria<br>
-							P: +(01) 632 2086<br>
-							P: +(070) 463 10735<br>
-							P: +(070) 463 10738
+							<p>11A Isaac John Street GRA, Ikeja, Lagos, Nigeria (Near IPNX Ikeja Office)<br>
+							P: (01) 632 2086<br>
+							P: (070) 463 10735<br>
+							P: (070) 463 10738
 							</p>
 						</div>
 					</div>
@@ -350,27 +350,27 @@
 				<div class="clinics">
 					<div class="clinic">
 						<h4>Apapa Clinic</h4>
-						<p>5 Douala Road Apapa, Lagos, Nigeria(Near Apapa Post Office)<br>
-						P: +(080) 505 575 74<br>
-						P: +(080) 348 490 05<br>
-						P: +(070) 463 107 33
+						<p>5 Douala Road Apapa, Lagos, Nigeria (Near Apapa Post Office)<br>
+						P: (080) 505 575 74<br>
+						P: (080) 348 490 05<br>
+						P: (070) 463 107 33
 						</p>
 					</div>
 					<div class="clinic">
 						<h4>Ikoyi Clinic</h4>
-						<p>22B Milverton Road Ikoyi, Lagos, Nigeria(Near St. Saviour's School Ikoyi)<br>
-						P: +(01) 279 8232<br>
-						P: +(01) 279 8233<br>
-						P: +(080) 668 56109<br>
-						P: +(070) 463 10734
+						<p>22B Milverton Road Ikoyi, Lagos, Nigeria (Near St. Saviour's School Ikoyi)<br>
+						P: (01) 279 8232<br>
+						P: (01) 279 8233<br>
+						P: (080) 668 56109<br>
+						P: (070) 463 10734
 						</p>
 					</div>
 					<div class="clinic">
 						<h4>Ikeja Clinic</h4>
-						<p>11A Isaac John Street(Near IPNX Ikeja Office)GRA, Ikeja, Lagos, Nigeria<br>
-							P: +(01) 632 2086<br>
-							P: +(070) 463 10735<br>
-							P: +(070) 463 10738
+						<p>11A Isaac John Street GRA, Ikeja, Lagos, Nigeria (Near IPNX Ikeja Office)<br>
+							P: (01) 632 2086<br>
+							P: (070) 463 10735<br>
+							P: (070) 463 10738
 						</p>
 					</div>
 				</div>
