@@ -72,7 +72,7 @@
 					$flag_error = 'Please fill all required fields';
 				}
 			} else {
-				$flag_error = 'Invalid captcha';
+				$flag_error = 'Please enter the correct captcha code.';
 			}
 		} else {
 			$flag_error = 'Invalid Request';
