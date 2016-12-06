@@ -70,7 +70,7 @@
 						"message" => $index_message
 					));
 					$to = 'frontoffice@schubbsdental.com';
-					$subject = 'Contact Form Schubbs Dental Clinic';
+					$subject = 'Contact Form Submission - Schubbs Dental Clinic';
 					$message = 'Name: '.$index_full_name.'<br>Email: '.$index_email.'<br> Mobile: '.$index_mobile.'<br> Message: '.$index_message.'<br> Subject: '.$index_subject.'<br> Message: '.$index_message;
 					$headers = array('Content-Type: text/html; charset=UTF-8');
 					wp_mail( $to, $subject, $message, $headers );

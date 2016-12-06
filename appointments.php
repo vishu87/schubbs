@@ -48,23 +48,22 @@
 
 						));
 						
-						// $to = 'frontoffice@schubbsdental.com';
-						// $subject = 'Schubbs Dental Appointment Form';
-						// $message = '<b>Name: </b>'.$full_name.'<br>
-						// 			<b>Email: </b>'.$email.'<br>
-						// 			<b>Mobile: </b>'.$mobile.'<br>
-						// 			<b>Alternate Mobile: </b>'.$mobile2.'<br>
-						// 			<b>Appoint Date: </b>'.date("Y-m-d",strtotime($appoint_date)).'<br>
-						// 			<b>Appoint Time: </b>'.$appoint_time.'<br>
-						// 			<b>Location: </b>'.$location.'<br>
-						// 			<b>Reason: </b>'.$reason.'<br>
-						// 			<b>First Visit: </b>'.$first_visit.'<br>
-						// 			<b>Last 6 Months Visit: </b>'.$last_visit.'<br>
-						// 			<b>Message: </b>'.$comment;
+						$to = 'frontoffice@schubbsdental.com';
+						$subject = 'Appointment - Schubbs Dental';
+						$message = '<b>Name: </b>'.$full_name.'<br>
+									<b>Email: </b>'.$email.'<br>
+									<b>Mobile: </b>'.$mobile.'<br>
+									<b>Alternate Mobile: </b>'.$mobile2.'<br>
+									<b>Appoint Date: </b>'.date("Y-m-d",strtotime($appoint_date)).'<br>
+									<b>Appoint Time: </b>'.$appoint_time.'<br>
+									<b>Location: </b>'.$location.'<br>
+									<b>Reason: </b>'.$reason.'<br>
+									<b>First Visit: </b>'.$first_visit.'<br>
+									<b>Message: </b>'.$comment;
 
-						// $headers = ('Content-Type: text/html; charset=UTF-8');
+						$headers = ('Content-Type: text/html; charset=UTF-8');
 						
-						// wp_mail( $to, $subject, $message, $headers );
+						wp_mail( $to, $subject, $message, $headers );
 
 						wp_redirect(get_permalink().'?submit=true#success');
 					}
