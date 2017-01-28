@@ -11,18 +11,18 @@
 					<span>&copy;2016 SCHUBBS Dental Clinics</span>
 				</div> -->
 			</div>
-			<!-- <div class="col-md-6">
+			<div class="col-md-5">
 				<div>
 					<nav class="footer-menu">
 						<?php 
-							$primary_menu = wp_nav_menu(array(
-								'theme-location'=>'primary-menu','echo'=>false));
+							$footer_menu = wp_nav_menu(array(
+								'theme_location'=>'footer-menu','echo'=>true));
 						?>
-						<?php echo preg_replace('/\n/', '', $primary_menu) ?>
+						<?php echo preg_replace('/\n/', '', $footer_menu) ?>
 					</nav>
 				</div>
-			</div> -->
-			<div class="col-md-5"></div>
+			</div>
+			<!-- <div class="col-md-5"></div> -->
 			<div class="col-md-4">
 				<div class="white-button">
 					<a href="<?php echo get_home_url();?>/appointment">Request Appointment</a>

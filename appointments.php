@@ -192,11 +192,11 @@ get_header(); the_post();
 
 						</div>
 						<div id="first-visit-form" class="visit-form">
-							<a href="<?php echo get_home_url();?>/wp-content/uploads/2016/11/New-Patients.pdf" target="_blank">Download New Patient Form</a>
+							<a href="<?php echo get_home_url();?>/wp-content/uploads/2017/01/New-Patients.pdf" target="_blank">Download New Patient Form</a>
 							<label class="error">* Download Form and save time at the clinic during your visit</label>
 						</div>
 						<div id="last-visit-form" class="visit-form">
-							<a href="<?php echo get_home_url();?>/wp-content/uploads/2016/11/Update-Form.pdf" target="_blank">Download Returning Patient Form</a>
+							<a href="<?php echo get_home_url();?>/wp-content/uploads/2017/01/Update-Form.pdf" target="_blank">Download Returning Patient Form</a>
 							<label class="error">* Download Form and save time at the clinic during your visit</label>
 						</div>
 					</div>

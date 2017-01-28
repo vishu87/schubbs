@@ -29,7 +29,7 @@
 				<nav class="header-menu">
 					<?php 
 						$primary_menu = wp_nav_menu(array(
-							'theme-location'=>'primary-menu','echo'=>false));
+							'theme_location'=>'primary-menu','echo'=>false));
 					?>
 					<?php echo preg_replace('/\n/', '', $primary_menu) ?>
 				</nav>

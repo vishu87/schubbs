@@ -65,7 +65,7 @@ jQuery("#appoint-form").validate();
 
 jQuery(document).ready(function(){
 
-    jQuery("#menu-bar").click(function(){
+    jQuery("#menu-bar img").click(function(){
         jQuery(".header-menu ul").slideToggle();
     });
 

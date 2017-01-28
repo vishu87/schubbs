@@ -65,10 +65,8 @@ body {
 	width: 100%;
 }
 .logo-img img {
-	width: 100%;
+	width: 220px;
 	height: auto;
-	max-width: 220px;
-	min-width: 150px;
 }
 .logo-img-small{
 	display: none;
@@ -102,8 +100,6 @@ body {
 #menu-bar img {
 	width: 32px;
 	height: auto;
-}
-#menu-bar:hover {
 	cursor: pointer;
 }
 .banner-big-text {
@@ -432,14 +428,18 @@ body {
 #last-visit-form {
 	display: none;
 }
-/*#last-visit {
-	display: none;
-}*/
 
 /**** About Us.php ****/
 
 .page-content {
 	color: #002434;
+}
+.page-content a {
+	color: #3FB9C9;
+}
+.page-content h3 {
+	font-size: 20px;
+	font-weight: 600;
 }
 .about-img img {
 	width: 100%;
@@ -661,7 +661,7 @@ body {
 	font-size: 16px;
 }
 
-/*---- search.php -----*/
+/****** search.php ******/
 
 .search-highlight {
     background: #eee  
@@ -671,21 +671,25 @@ body {
 /******** footer.php ********/
 
 .footer-menu {
-	padding-top: 25px;
+	padding-top: 10px;
 }
 .footer-menu ul {
 	padding-left: 0;
-	text-align: center;
+	text-align: right;
 }
 .footer-menu ul li {
-	padding: 5px 10px;
-	display: inline-block;
+	/*padding: 5px 10px;*/
+	display: block;
 	list-style-type: none;
 }
 .footer-menu ul li a {
-	color: #002434;
-	font-size: 15px;
+	color: #fff;
+	/*font-size: 15px;*/
 	text-decoration: none;
+	text-transform: uppercase;
+}
+.footer-menu ul li a:hover {
+	color: #002434;
 }
 .white-button {
 	text-align: center;
@@ -710,6 +714,9 @@ body {
 .footer-social ul li {
 	display: inline-block;
 	list-style-type: none;
+}
+.footer-social ul li a {
+	display: inline-block;
 }
 .footer-social ul li a img {
 	width: 30px;

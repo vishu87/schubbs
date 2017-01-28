@@ -1,89 +1,118 @@
 <?php /*Template Name: Home Page Template*/
+
+	$captcha_instance = new ReallySimpleCaptcha();
+	$captcha_instance2 = new ReallySimpleCaptcha();
+
+
 	global $wpdb;
 	$flag_error = '';
 	if(isset($_POST['is_submit'])) {
 
 		if(wp_verify_nonce($_POST["_wpnonce"], 'testimonial-form')){
-			$full_name = (isset($_POST["full_name"]))?esc_attr($_POST["full_name"]):'';
-			$message = (isset($_POST["message"]))?esc_attr($_POST["message"]):'';
 
-			if($full_name && $message){
+			$prefix = $_POST["prefix"];
+			$correct = $captcha_instance2->check( $prefix, $_POST["captcha_test"] );
+			if($correct){
 
-				$check_preg = true;
-				// if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
-				// 	$flag_error = "*Please provide a valid email address";
-				// 	$check_preg = false;
-				// }
+				$captcha_instance->remove( $prefix );
+				$full_name = (isset($_POST["full_name"]))?esc_attr($_POST["full_name"]):'';
+				$message = (isset($_POST["message"]))?esc_attr($_POST["message"]):'';
 
-				if($check_preg){
-					$wpdb->insert('testimonials',array(
-						"name" => $full_name,
-						"message" => $message
-					));
-				    
-				    
-				    $new_post = array(
-				        'post_title'    => $full_name,
-				        'post_content'  => $message,
-				        'post_status'   => 'draft',
-				        'post_type' => 'testimonial'
-				    );
+				if($full_name && $message){
 
-				    $pid = wp_insert_post($new_post);
-					wp_redirect(get_home_url().'?test_submit=true#test_success');
+					$check_preg = true;
+					// if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
+					// 	$flag_error = "*Please provide a valid email address";
+					// 	$check_preg = false;
+					// }
 
+					if($check_preg){
+						$wpdb->insert('testimonials',array(
+							"name" => $full_name,
+							"message" => $message
+						));
+					    
+					    
+					    $new_post = array(
+					        'post_title'    => $full_name,
+					        'post_content'  => $message,
+					        'post_status'   => 'draft',
+					        'post_type' => 'testimonial'
+					    );
+
+					    $pid = wp_insert_post($new_post);
+						wp_redirect(get_home_url().'?test_submit=true#test_success');
+
+					}
+				} else {
+					$flag_error = '*Please fill all the fields';
 				}
 			} else {
-				$flag_error = '*Please fill all the fields';
+				$flag_error = '*Please enter the correct captcha code';
 			}
 		} else {
 			$flag_error = '*Invalid Request';
 		}
 	}
 ?>
+
 <?php /* Index Page */
 	global $wpdb;
 	$index_flag_error = '';
 	if(isset($_POST['is_index_submit'])) {
 
 		if(wp_verify_nonce($_POST["_wpnonce"], 'index-form')){
-			$index_full_name = (isset($_POST["index_full_name"]))?esc_attr($_POST["index_full_name"]):'';
-			$index_email = (isset($_POST["index_email"]))?esc_attr($_POST["index_email"]):'';
-			$index_mobile = (isset($_POST["index_mobile"]))?esc_attr($_POST["index_mobile"]):'';
-			$index_subject = (isset($_POST["index_subject"]))?esc_attr($_POST["index_subject"]):'';
-			$index_message = (isset($_POST["index_message"]))?esc_attr($_POST["index_message"]):'';
 
-			if($index_full_name && $index_email && $index_mobile){
+			$prefix = $_POST["prefix"];
+			$correct = $captcha_instance->check( $prefix, $_POST["captcha_test"] );
+			if($correct) {
 
-				$check_preg = true;
-				if(filter_var($index_email, FILTER_VALIDATE_EMAIL) === false){
-					$index_flag_error = "*Please provide a valid email address";
-					$check_preg = false;
-				}
+				$index_full_name = (isset($_POST["index_full_name"]))?esc_attr($_POST["index_full_name"]):'';
+				$index_email = (isset($_POST["index_email"]))?esc_attr($_POST["index_email"]):'';
+				$index_mobile = (isset($_POST["index_mobile"]))?esc_attr($_POST["index_mobile"]):'';
+				$index_subject = (isset($_POST["index_subject"]))?esc_attr($_POST["index_subject"]):'';
+				$index_message = (isset($_POST["index_message"]))?esc_attr($_POST["index_message"]):'';
 
-				if($check_preg){
-					$wpdb->insert('messages',array(
-						"name" => $index_full_name,
-						"email" => $index_email,
-						"mobile" => $index_mobile,
-						"subject" => $index_subject,
-						"message" => $index_message
-					));
-					$to = 'frontoffice@schubbsdental.com';
-					$subject = 'Contact Form Submission - Schubbs Dental Clinic';
-					$message = 'Name: '.$index_full_name.'<br>Email: '.$index_email.'<br> Mobile: '.$index_mobile.'<br> Message: '.$index_message.'<br> Subject: '.$index_subject.'<br> Message: '.$index_message;
-					$headers = array('Content-Type: text/html; charset=UTF-8');
-					wp_mail( $to, $subject, $message, $headers );
-					
-					wp_redirect(get_home_url().'?index_submit=true#index_success');
+				if($index_full_name && $index_email && $index_mobile){
+
+					$check_preg = true;
+					if(filter_var($index_email, FILTER_VALIDATE_EMAIL) === false){
+						$index_flag_error = "*Please provide a valid email address";
+						$check_preg = false;
+					}
+
+					if($check_preg){
+						$wpdb->insert('messages',array(
+							"name" => $index_full_name,
+							"email" => $index_email,
+							"mobile" => $index_mobile,
+							"subject" => $index_subject,
+							"message" => $index_message
+						));
+						$to = 'frontoffice@schubbsdental.com';
+						$subject = 'Contact Form Submission - Schubbs Dental Clinic';
+						$message = 'Name: '.$index_full_name.'<br>Email: '.$index_email.'<br> Mobile: '.$index_mobile.'<br> Message: '.$index_message.'<br> Subject: '.$index_subject.'<br> Message: '.$index_message;
+						$headers = array('Content-Type: text/html; charset=UTF-8');
+						wp_mail( $to, $subject, $message, $headers );
+						
+						wp_redirect(get_home_url().'?index_submit=true#index_success');
+					}
+				} else {
+					$index_flag_error = '*Please fill all the fields';
 				}
 			} else {
-				$index_flag_error = '*Please fill all the fields';
+				$index_flag_error = '*Please enter the correct captcha code';
 			}
 		} else {
 			$index_flag_error = '*Invalid Request';
 		}
 	}
+?>
+<?php
+$word = $captcha_instance->generate_random_word();
+$prefix = mt_rand();
+$img = $captcha_instance->generate_image( $prefix, $word ); the_post();
+
 ?>
 <?php get_header('home'); the_post(); ?>
 
@@ -100,6 +129,9 @@
 		    	<div class="appoint-modal">
 					<form name="test_form" method="POST" action="" id="testimonial-form" class="appoint-form testimonial-form">
 						<h3>Add Testimonial</h3>
+						<?php if($flag_error != ''): ?>
+							<div class="flag-error"><?php echo $flag_error ?></div>
+						<?php endif; ?>
 						<div class="form-div">
 							<label>Name<span class="red-asterik">*</span></label>
 							<input class="form-input" name="full_name" required="true" value="<?php echo (isset($_POST["full_name"]))?esc_attr($_POST["full_name"]):'' ?>" >
@@ -108,7 +140,22 @@
 							<label>Message<span class="red-asterik">*</span></label>
 							<textarea class="form-input" name="message" required="true" value="<?php echo (isset($_POST["message"]))?esc_attr($_POST["message"]):'' ?>" ><?php echo (isset($_POST["message"]))?esc_attr($_POST["message"]):'' ?></textarea>
 						</div>
+						<div class="form-div">
+							<div class="row">
+								<div class="col-xs-12">
+									<label>Please fill the text shown in image</label>
+								</div>
+								<div class="col-md-6">
+									<input class="form-input" name="captcha_test" required="true">
+								</div>
+								<div class="col-md-6">
+									<span class="captcha-image"><img src="<?php echo home_url().'/wp-content/plugins/really-simple-captcha/tmp/'.$img; ?>" /></span>
+									<span class="reload-captcha"> <i class="fa fa-refresh"></i> Reload</span>
+								</div>
+							</div>
+						</div>
 						<input type="hidden" name="is_submit" value="1">
+						<input type="hidden" id="prefix" name="prefix" value="<?php echo $prefix; ?>">
 						<?php wp_nonce_field('testimonial-form') ?>
 						<div class="form-div">
 							<input type='submit' class="blue-btn" value="Submit" >
@@ -299,7 +346,22 @@
 						<div class="form-elem">
 							<textarea name="index_message" value="<?php echo (isset($_POST['index_message']))?esc_attr($_POST['index_message']):''?>" placeholder="Your message"><?php echo (isset($_POST['index_message']))?esc_attr($_POST['index_message']):''?></textarea>
 						</div>
+						<div class="form-div">
+							<div class="row">
+								<div class="col-xs-12">
+									<label>Please fill the text shown in image</label>
+								</div>
+								<div class="col-md-6">
+									<input class="form-input" name="captcha_test" required="true">
+								</div>
+								<div class="col-md-6">
+									<span class="captcha-image"><img src="<?php echo home_url().'/wp-content/plugins/really-simple-captcha/tmp/'.$img; ?>" /></span>
+									<span class="reload-captcha"> <i class="fa fa-refresh"></i> Reload</span>
+								</div>
+							</div>
+						</div>
 						<input type="hidden" name="is_index_submit" value="2">
+						<input type="hidden" id="prefix" name="prefix" value="<?php echo $prefix; ?>">
 						<?php wp_nonce_field('index-form') ?>
 						<div class="submit-button">
 							<input class="submit-btn" type="submit" value="Send Message">
