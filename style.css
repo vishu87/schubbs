@@ -1056,8 +1056,9 @@ span.red-asterik {
 }
 .flag-error {
     color: #f00;
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 .test-back .div-success {
 	width:350px;

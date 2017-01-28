@@ -345,10 +345,10 @@ $img = $captcha_instance->generate_image( $prefix, $word ); the_post();
 						<div class="form-elem">
 							<textarea name="index_message" value="<?php echo (isset($_POST['index_message']))?esc_attr($_POST['index_message']):''?>" placeholder="Your message"><?php echo (isset($_POST['index_message']))?esc_attr($_POST['index_message']):''?></textarea>
 						</div>
-						<div class="form-div">
+						<div class="form-elem">
 							<div class="row">
 								<div class="col-xs-12">
-									<label>Please fill the text shown in image</label>
+									<label style="color:#fff">Please fill the text shown in image</label>
 								</div>
 								<div class="col-md-6">
 									<input class="form-input" name="captcha_test" required="true">
