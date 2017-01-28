@@ -31,8 +31,8 @@
 							"name" => $full_name,
 							"message" => $message
 						));
-					    
-					    
+
+
 					    $new_post = array(
 					        'post_title'    => $full_name,
 					        'post_content'  => $message,
@@ -48,15 +48,14 @@
 					$flag_error = '*Please fill all the fields';
 				}
 			} else {
-				$flag_error = '*Please enter the correct captcha code';
+				$flag_error = '* Please enter the correct captcha code';
+				$incorrect_captcha = true;
 			}
 		} else {
 			$flag_error = '*Invalid Request';
 		}
 	}
-?>
 
-<?php /* Index Page */
 	global $wpdb;
 	$index_flag_error = '';
 	if(isset($_POST['is_index_submit'])) {
@@ -94,7 +93,7 @@
 						$message = 'Name: '.$index_full_name.'<br>Email: '.$index_email.'<br> Mobile: '.$index_mobile.'<br> Message: '.$index_message.'<br> Subject: '.$index_subject.'<br> Message: '.$index_message;
 						$headers = array('Content-Type: text/html; charset=UTF-8');
 						wp_mail( $to, $subject, $message, $headers );
-						
+
 						wp_redirect(get_home_url().'?index_submit=true#index_success');
 					}
 				} else {
@@ -122,7 +121,7 @@ $img = $captcha_instance->generate_image( $prefix, $word ); the_post();
 <div style="height:0">
 	<div class="col-md-3"></div>
 	<div class="col-md-6">
-		<div id="myModal" class="modal">
+		<div id="myModal" class="modal" <?php if(isset($incorrect_captcha)):?> style="display: block" <?php endif; ?>>
 
 		  <!-- Modal content -->
 		 	<div class="modal-content" style="min-height:300px;">
@@ -168,7 +167,7 @@ $img = $captcha_instance->generate_image( $prefix, $word ); the_post();
 	</div>
 	<div class="col-md-3"></div>
 </div>
-<!-- Modal End -->	
+<!-- Modal End -->
 <body <?php body_class(); ?>>
 <div class="container-fluid dark-blue-back">
 	<div class="container">
@@ -267,7 +266,7 @@ $img = $captcha_instance->generate_image( $prefix, $word ); the_post();
 		<div class="sep3"></div>
 		<div class="testimonials">
 			<?php
-			$query = new WP_Query(array( 
+			$query = new WP_Query(array(
 				'post_type'   => 'testimonial',
 				'posts_per_page' => -1
 			));
@@ -330,7 +329,7 @@ $img = $captcha_instance->generate_image( $prefix, $word ); the_post();
 						Thank You. We will get back to you soon.
 					</div>
 					<?php else: ?>
-					<form name="index-form" action="" method="POST" id="index-form" class="appoint-form testimonial-form">
+					<form name="index-form" action="#index_success" method="POST" id="index-form" class="appoint-form testimonial-form">
 						<div class="form-elem">
 							<input type="text" name="index_full_name" value="<?php echo (isset($_POST['index_full_name']))?esc_attr($_POST['index_full_name']):''?>" placeholder="Your full name" required>
 						</div>
@@ -408,7 +407,7 @@ $img = $captcha_instance->generate_image( $prefix, $word ); the_post();
 				</div>
 
 				<!--Mobile Corousel-->
-				
+
 				<div class="clinics">
 					<div class="clinic">
 						<h4>Apapa Clinic</h4>
@@ -436,7 +435,7 @@ $img = $captcha_instance->generate_image( $prefix, $word ); the_post();
 						</p>
 					</div>
 				</div>
-				
+
 				<!--End Corousel-->
 			</div>
 		</div>
@@ -449,10 +448,10 @@ $img = $captcha_instance->generate_image( $prefix, $word ); the_post();
 	<div class="sep3"></div>
 	<div class="schubbs-news">
 		<?php
-			$query = new WP_Query(array( 
+			$query = new WP_Query(array(
 				'post_type'   => 'news',
 				'posts_per_page' => -1
-				) 
+				)
 			);
 			if($query->have_posts()): while($query->have_posts()): $query->the_post();
 			?>
@@ -464,13 +463,13 @@ $img = $captcha_instance->generate_image( $prefix, $word ); the_post();
 					<div class="news-text">
 						<?php
 						$home_news_title = get_the_title();
-						
+
 						if(strlen($home_news_title) > 25) { ?>
 							<a href="<?php echo get_permalink();?>"><h3><?php echo substr($home_news_title, 0, 25).'...';?></h3></a>
 						<?php } else { ?>
 							<a href="<?php echo get_permalink();?>"><h3><?php echo $home_news_title; ?></h3></a>
 						<?php } ?>
-						
+
 						<?php $home_news_content = get_the_excerpt();
 						if(strlen($home_news_content) > 125) { ?>
 							<a href="<?php the_permalink();?>"><p><?php echo substr($home_news_content, 0, 125).'...';?></p></a>
